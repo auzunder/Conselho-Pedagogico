@@ -58,7 +58,6 @@ header{
     justify-content: center;
     display: flex;
     list-style-type: none;
-    width: 100%;
     margin: auto;
     padding: 0;
 }
@@ -69,6 +68,7 @@ header{
 
 #NavBarLinks{
     flex-grow: 1;
+    justify-content: space-between;
 }
 
 .NavBarListItem{
@@ -307,7 +307,7 @@ footer{
         width: 150%;
         justify-content: center;
     }
-    #noticias > #noticiasContent, #NavBarLinks{
+    #noticias > #noticiasContent{
         flex-direction: column;
         gap: 0.5rem;
     }
@@ -334,7 +334,11 @@ footer{
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 780px) {
+    #NavBarLinks{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
     footer{
         gap: 0;
         justify-content: space-evenly;
