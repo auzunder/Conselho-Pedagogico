@@ -201,8 +201,7 @@ header{
     display: flex;
     flex-grow: 1;
     flex-flow: column;
-    gap: 2rem;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #noticias > #noticiasContent > #alternativeContent > * > .text{
@@ -218,6 +217,8 @@ header{
 }
 
 #noticias > #noticiasContent > #alternativeContent > * {
+    display: flex;
+    justify-content: space-between;
     margin: 0;
     height: calc(100vw * 0.1045);
 }
@@ -231,11 +232,6 @@ header{
 #noticias > #noticiasContent > #alternativeContent > * > .text > h2{
     margin-top: 0;
     margin-bottom: 10px;
-}
-
-.altNot{
-    display: flex;
-    gap: 0 1rem;
 }
 
 .image{
@@ -280,6 +276,17 @@ footer{
     #NavBarLists{
         gap: 5rem;
     }
+
+    #noticias > #noticiasContent{
+        gap: 2rem;
+    }
+
+    #noticias > #noticiasContent > #alternativeContent > * > .image{
+        margin: 0;
+        height: calc(100vw * 0.11);
+        width: calc(100vw * 0.11);
+    }
+    
     #noticias > #noticiasContent > #alternativeContent > * > .text > h2{
         margin-top: 0;
         font-size: 20px;
