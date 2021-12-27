@@ -26,12 +26,9 @@ div{
     border: #000000 solid 1px;
     /**/
 }
-script{
-    display: none;
-}
 
 
-/*Navigation Bar CSS*/
+/* NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR */
 header{
     top: 0;
     align-items: center;
@@ -47,7 +44,7 @@ header{
 }
 
 
-/*Logo CSS*/
+/* LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO */
 #logo{
     height: 75px;
 }
@@ -55,7 +52,9 @@ header{
 #logo, #langChoice{
     width: 25%;
 }
-/*HiperLinks CSS*/
+/* LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO */
+
+/* HYPERLINKS HYPERLINKS HYPERLINKS HYPERLINKS HYPERLINKS HYPERLINKS HYPERLINKS */
 #NavBarLists, #langList{
     justify-content: center;
     display: flex;
@@ -77,8 +76,9 @@ header{
     text-decoration: none;
     color: #000000;
 }
+/* HYPERLINKS HYPERLINKS HYPERLINKS HYPERLINKS HYPERLINKS HYPERLINKS HYPERLINKS */
 
-/*Language CSS*/
+/* LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS */
 .Lang{
     font-family: Gotham;
     font-style: normal;
@@ -87,11 +87,16 @@ header{
     text-decoration: none;
     color: #000000;
 }
+/* LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS */
+/* NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR */
+
 
 #container{
     width: 100%;
 }
 
+
+/* SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR */
 #pesquisa{
     margin: 10px auto;
     display: flex;
@@ -119,13 +124,15 @@ header{
     width: 40px;
     height: 40px;
 }
+/* SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR */
 
-
+/* FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO */
 #mainPhoto > img{
     width: 100%;
 }
+/* FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO */
 
-
+/* SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN */
 #slogan{
     display: flex;
     margin: auto;
@@ -135,7 +142,9 @@ header{
 #slogan > img{
     width: 75%;
 }
+/* SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN SLOGAN */
 
+/* NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS */
 #noticias > #separadorNoticias, 
 #noticias > #separadorNoticias > img,
 #programa > #separadorPrograma,
@@ -234,19 +243,21 @@ header{
     height: calc(0.243056*100vw);
     background-image: url(/Imagens/dawdsadwa.png);
 }
+/* NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS */
 
-
+/* PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA */
 #programa{
     gap: 1rem;
 }
 
 #programa > #frstRow,
 #programa > #ScndRow{
+    max-width: 75%;
     display: flex;
     gap: 1.5rem;
     margin: 0 1.5rem;
-    font-size: calc(100vw * 0.018);
-    line-height: calc(100vw * 0.0234);
+    font-size: calc(100vw * 0.015);
+    line-height: calc(100vw * 0.02);
 }
 
 #programa > #frstRow >*,
@@ -275,7 +286,30 @@ header{
     justify-content: center;
     margin: 0;
 }
+/* PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA */
 
+/* MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO */
+.title{
+    margin-top: 100px;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+#MfrstRow,
+#MScndRow{
+    display: flex;
+    justify-content: space-around;
+}
+
+#MfrstRow,
+#MScndRow,
+#MfrstFrstRow,
+#MfrstScndRow,
+#MscndFrstRow{
+    display: flex;
+    justify-content: space-around;
+}
+/* MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO */
 
 footer, footer >*, footer >* >*{
     display: flex;
@@ -304,6 +338,14 @@ footer{
 }
 
 /*Responsive css*/
+
+@media only screen and (max-width: 1400px) {
+    #programa > #frstRow,
+    #programa > #ScndRow{
+    font-size: calc(100vw * 0.013);
+    line-height: calc(100vw * 0.015);
+    }
+}
 
 @media only screen and (max-width: 1400px) {
     #wrapper{
@@ -340,6 +382,10 @@ footer{
         font-size: 20px;
         margin-bottom: 5px;
     }
+    #programa > #frstRow,
+    #programa > #ScndRow{
+    width: 90%;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -353,8 +399,8 @@ footer{
     #programa > #frstRow,
     #programa > #ScndRow{
     flex-flow: column;
-    font-size: calc(100vw * 0.03);
-    line-height: calc(100vw * 0.034);
+    font-size: calc(100vw * 0.025);
+    line-height: calc(100vw * 0.028);
     }
 }
 
@@ -411,5 +457,10 @@ footer{
     #socials > a > img{
         display: flex;
         width: 30px;
+    }
+    #programa > #frstRow,
+    #programa > #ScndRow{
+    font-size: calc(100vw * 0.023);
+    line-height: calc(100vw * 0.025);
     }
 }
