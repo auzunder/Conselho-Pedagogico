@@ -22,7 +22,7 @@ header, header >*, header >* >*{
 }
 div{
     margin: 20px 0;
-    /**
+    /**/
     border: #000000 solid 1px;
     /**/
 }
@@ -136,11 +136,18 @@ header{
     width: 75%;
 }
 
-#noticias > #separadorNoticias, #noticias > #separadorNoticias > img{
+#noticias > #separadorNoticias, 
+#noticias > #separadorNoticias > img,
+#programa > #separadorPrograma,
+#programa > #separadorPrograma > img,
+#quemSomos > #separadorQuemSomos,
+#quemSomos > #separadorQuemSomos > img{
     width: 100%;
 }
 
-#noticias{
+#noticias, 
+#programa,
+#quemSomos{
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -229,6 +236,46 @@ header{
 }
 
 
+#programa{
+    gap: 1rem;
+}
+
+#programa > #frstRow,
+#programa > #ScndRow{
+    display: flex;
+    gap: 1.5rem;
+    margin: 0 1.5rem;
+    font-size: calc(100vw * 0.021);
+    line-height: calc(100vw * 0.0234);
+}
+
+#programa > #frstRow >*,
+#programa > #ScndRow >*{
+    gap: 1.5rem;
+    font-weight: 900;
+    flex: 1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#programa > #frstRow >* >*,
+#programa > #ScndRow >* >*{
+    padding: 30px;
+    font-weight: 900;
+    flex: 1;
+    background-color: #689CB1;
+    height: calc(100vw * 0.16);
+    border-radius: 25px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
 
 footer, footer >*, footer >* >*{
     display: flex;
@@ -267,7 +314,12 @@ footer{
         gap: 5rem;
     }
 
-    #noticias > #separadorNoticias, #noticias > #separadorNoticias > img{
+    #noticias > #separadorNoticias, 
+    #noticias > #separadorNoticias > img,
+    #programa > #separadorPrograma,
+    #programa > #separadorPrograma > img,
+    #quemSomos > #separadorQuemSomos,
+    #quemSomos > #separadorQuemSomos > img{
         display: flex;
         width: 125%;
         justify-content: center;
@@ -298,6 +350,10 @@ footer{
     #pesquisa{
         width: 50%;
     }
+    #programa > #frstRow,
+    #programa > #ScndRow{
+    flex-flow: column;
+}
 }
 
 @media (max-width: 990px) {
