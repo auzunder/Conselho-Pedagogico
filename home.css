@@ -198,7 +198,7 @@ header{
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.7rem;
-    margin-bottom: auto;
+    margin-bottom: 0;
 }
 
 #noticias > #noticiasContent > #alternativeContent{
