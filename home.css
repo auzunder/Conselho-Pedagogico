@@ -125,39 +125,17 @@ header{
 
 
 #slogan{
-    text-align: center;
-    font-size: 150px;
-    line-height: 150px;
-}
-
-
-#noticias > #separadorNoticias{
     display: flex;
-    flex-flow: column;
-    background-image: url(/Imagens/SeparadorNoticias.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: calc(0.1211*100vw);
+    margin: auto;
     justify-content: center;
-    align-items: center;
 }
 
-#ghostspacing{
-    margin: 0;
+#slogan > img{
+    width: 75%;
+}
+
+#noticias > #separadorNoticias, #noticias > #separadorNoticias > img{
     width: 100%;
-    height: calc(0.033*100vw);
-}
-
-#noticias > #separadorNoticias > h1{
-    display: flex;
-    font-weight: bold;
-    margin: 0;
-    font-size: calc(0.042*100vw);
-    line-height: calc(0.042*100vw);
-    color: white;
-    flex-grow: 1 ;
-    align-items: center;
 }
 
 #noticias{
@@ -170,8 +148,8 @@ header{
 #noticias > #noticiasContent{
     margin: 0;
     display: flex;
+    gap: 1.5rem;
     width: 75%;
-    gap: 5rem;
 }
 
 #noticias > #noticiasContent > *{
@@ -276,9 +254,21 @@ footer{
     gap: 1rem;
 }
 
+/*Responsive css*/
+
 @media only screen and (max-width: 1400px) {
+    body{
+        overflow-x: hidden;
+    }
+
     #NavBarLists{
         gap: 5rem;
+    }
+
+    #noticias > #separadorNoticias, #noticias > #separadorNoticias > img{
+        display: flex;
+        width: 125%;
+        justify-content: center;
     }
 
     #noticias > #noticiasContent{
@@ -295,5 +285,67 @@ footer{
         margin-top: 0;
         font-size: 20px;
         margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 1100px) {
+    #slogan{
+        font-size: 70px;
+        line-height: 70px;
+    }
+    #pesquisa{
+        width: 50%;
+    }
+}
+
+@media (max-width: 990px) {
+    body{
+        overflow-x: hidden;
+    }
+    #noticias > #separadorNoticias, #noticias > #separadorNoticias > img{
+        display: flex;
+        width: 150%;
+        justify-content: center;
+    }
+    #noticias > #noticiasContent, #NavBarLinks{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    #noticias > #noticiasContent > #mainContent > * > .image{
+        height: calc(100vw * 0.5);
+    }
+    #noticias > #noticiasContent, #alternativeContent{
+        gap: 1.5rem;
+    }
+    #noticias > #noticiasContent > #alternativeContent > *{
+        gap: 1.5rem;
+        height: calc(100vw * 0.25);
+    }
+    #noticias > #noticiasContent > #alternativeContent > * > .image{
+        height: calc(100vw * 0.25);
+        width: calc(100vw * 0.25);
+    }
+    #pesquisa{
+        width: 60%;
+    }
+    #sloganRodape{
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 700px) {
+    footer{
+        gap: 0;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    #sloganRodape{
+        flex-shrink: 1;
+    }
+    #socials > a > img{
+        display: flex;
+        width: 30px;
     }
 }
