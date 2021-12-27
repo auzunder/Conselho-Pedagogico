@@ -245,7 +245,7 @@ header{
     display: flex;
     gap: 1.5rem;
     margin: 0 1.5rem;
-    font-size: calc(100vw * 0.021);
+    font-size: calc(100vw * 0.018);
     line-height: calc(100vw * 0.0234);
 }
 
@@ -353,7 +353,9 @@ footer{
     #programa > #frstRow,
     #programa > #ScndRow{
     flex-flow: column;
-}
+    font-size: calc(100vw * 0.03);
+    line-height: calc(100vw * 0.034);
+    }
 }
 
 @media (max-width: 990px) {
