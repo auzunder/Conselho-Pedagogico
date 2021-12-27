@@ -1,5 +1,5 @@
 /*Remoção de Margens do HTML*/
-body{
+#wrapper{
     margin: 0;
     display: flex;
     flex-flow: column;
