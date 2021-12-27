@@ -195,6 +195,10 @@ header{
 
 #noticias > #noticiasContent > #mainContent > #primeiraNoticia > *{
     display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.7rem;
+    margin-bottom: auto;
 }
 
 #noticias > #noticiasContent > #alternativeContent{
