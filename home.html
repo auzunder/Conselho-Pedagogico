@@ -44,8 +44,13 @@
                 <div id=navBarSpacing style="height: 100px;"></div>
                 <div id=pesquisa>
                     <form>
-                        <input type="text">
+                        <input list="searchList" type="text">
                         <button type="submit" id=submitSearch></button>
+                        <datalist id="searchList">
+                            <option value="Noticias">
+                            <option value="Programa">
+                            <option value="Sobre">
+                        </datalist>
                     </form>
                 </div>
                 <div id=mainPhoto>
