@@ -41,18 +41,7 @@
             </header>
             
             <div id=container>
-                <div id=navBarSpacing style="height: 100px;"></div>
-                <div id=pesquisa>
-                    <form>
-                        <input list="searchList" type="text">
-                        <button type="submit" id=submitSearch></button>
-                        <datalist id="searchList">
-                            <option value="Noticias">
-                            <option value="Programa">
-                            <option value="Sobre">
-                        </datalist>
-                    </form>
-                </div>
+                <div id=navBarSpacing style="height: 100px; margin: 0;"></div>
                 <div id=mainPhoto>
                     <img src="Imagens/MainPhoto.svg">
                 </div>
@@ -124,13 +113,61 @@
                             <div id=medidaESEC class="medida">
                                 ESEC PARA TODOS
                             </div>
+                            <div id=ESECPopUp class=modal>
+                                <div class=contentContainter>
+                                    <span class="close">&times;</span>
+                                    <div class=mainContent>
+                                        <div class=popUpTextContent>
+                                            <div class=popUpTitle>
+                                                ESEC PARA TODOS
+                                            </div>
+                                            <div class=popUpText>
+                                                A motivação do aluno é essencial para um bom rendimento do mesmo, portanto, pretende-se atribuir um espaço agradável onde a interação e integração entre os alunos de diversos cursos, e também com docentes, seja possível e benéfica. O espaço poderia ser reservado para possíveis eventos e convívios, tais receitas financeiras seriam destinadas à AE e a projetos pertencentes à instituição.
+                                            </div>
+                                        </div>
+                                        <img class=popUpImage src="Imagens/popUpMaterias.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div id=fsrtScndRow  class="medidas">
-                            <div id=medidaPagCartão  class="medida">
+                            <div id=medidaCaloiros  class="medida">
                                 MELHOR ORIENTAÇÃO DE CALOIROS
+                            </div>
+                            <div id=CaloirosPopUp class=modal>
+                                <div class=contentContainter>
+                                    <span class="close">&times;</span>
+                                    <div class=mainContent>
+                                        <div class=popUpTextContent>
+                                            <div class=popUpTitle>
+                                                MELHOR ORIENTAÇÃO DE CALOIROS
+                                            </div>
+                                            <div class=popUpText>
+                                                Intencionamos que existam dias específicos antes de começar o ano letivo para que sejam feitas visitas guiadas para darem a conhecer aos novos alunos o seu novo espaço e o seu funcionamento.
+                                            </div>
+                                        </div>
+                                        <img class=popUpImage src="Imagens/popUpMaterias.jpg"></img>
+                                    </div>
+                                </div>
                             </div>
                             <div id=medidaErasmus  class="medida">
                                 RESTRUTURAÇÃO DE CURSOS E HORÁRIOS
+                            </div>
+                            <div id=materiaisPopUp class=modal>
+                                <div class=contentContainter>
+                                    <span class="close">&times;</span>
+                                    <div class=mainContent>
+                                        <div class=popUpTextContent>
+                                            <div class=popUpTitle>
+                                                RESTRUTURAÇÃO DE CURSOS E HORÁRIOS
+                                            </div>
+                                            <div class=popUpText>
+                                                Propomos, que exista a opção de haver, pelo menos 1 semestre, em que o aluno se possa incidir na sua área de interesse por parte do curso, tendo o aluno a capacidade de escolher as unidades que que mais se identifica, dentro da área selecionada. Esta medida iria permitir ao aluno a sentir-se com mais competências dentro da sua área de interesse. Também iremos permitir ao aluno que faça o seu próprio horário, seguindo um limite de opções, de modo a que possa conciliar a sua vida académica com a sua vida pessoal. 
+                                            </div>
+                                        </div>
+                                        <img class=popUpImage src="Imagens/popUpMaterias.jpg"></img>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -139,16 +176,80 @@
                             <div id=medidaCaloiros  class="medida">
                                 PAGAMENTOS COM CARTÃO EM SERVIÇOS ESCOLARES
                             </div>
+                            <div id=materiaisPopUp class=modal>
+                                <div class=contentContainter>
+                                    <span class="close">&times;</span>
+                                    <div class=mainContent>
+                                        <div class=popUpTextContent>
+                                            <div class=popUpTitle>
+                                                FACILITAR ACESSO DE MATERIAIS NECESSÁRIOS
+                                            </div>
+                                            <div class=popUpText>
+                                                Pretendemos, assim, que os alunos possam ter, pelo menos, um desconto de estudante para as licenças dos programas da Adobe. O fornecimento de material atualizado e de qualidade é indispensável para a formação do aluno, propomos, assim, uma substituição por parte do material desatualizado, com a finalidade de atribui uma melhor qualidade de ensino, quer ao aluno quer ao docente. Ex: material fotográfico.
+                                            </div>
+                                        </div>
+                                        <img class=popUpImage src="Imagens/popUpMaterias.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
                             <div id=medidaAlunos  class="medida">
                                 MAIS ATENÇÃO AOS ALUNOS
+                            </div>
+                            <div id=materiaisPopUp class=modal>
+                                <div class=contentContainter>
+                                    <span class="close">&times;</span>
+                                    <div class=mainContent>
+                                        <div class=popUpTextContent>
+                                            <div class=popUpTitle>
+                                                FACILITAR ACESSO DE MATERIAIS NECESSÁRIOS
+                                            </div>
+                                            <div class=popUpText>
+                                                Pretendemos, assim, que os alunos possam ter, pelo menos, um desconto de estudante para as licenças dos programas da Adobe. O fornecimento de material atualizado e de qualidade é indispensável para a formação do aluno, propomos, assim, uma substituição por parte do material desatualizado, com a finalidade de atribui uma melhor qualidade de ensino, quer ao aluno quer ao docente. Ex: material fotográfico.
+                                            </div>
+                                        </div>
+                                        <img class=popUpImage src="Imagens/popUpMaterias.jpg"></img>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div id=ScndScndRow  class="medidas">
                             <div id=medidaNovoPolo class="medida">
                                 NOVO POLO PARA A ESEC
                             </div>
+                            <div id=materiaisPopUp class=modal>
+                                <div class=contentContainter>
+                                    <span class="close">&times;</span>
+                                    <div class=mainContent>
+                                        <div class=popUpTextContent>
+                                            <div class=popUpTitle>
+                                                FACILITAR ACESSO DE MATERIAIS NECESSÁRIOS
+                                            </div>
+                                            <div class=popUpText>
+                                                Pretendemos, assim, que os alunos possam ter, pelo menos, um desconto de estudante para as licenças dos programas da Adobe. O fornecimento de material atualizado e de qualidade é indispensável para a formação do aluno, propomos, assim, uma substituição por parte do material desatualizado, com a finalidade de atribui uma melhor qualidade de ensino, quer ao aluno quer ao docente. Ex: material fotográfico.
+                                            </div>
+                                        </div>
+                                        <img class=popUpImage src="Imagens/popUpMaterias.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
                             <div id=medidaCursosEHorarios class="medida">
                                 MAIOR INTEGRAÇÃO PARA ALUNOS DE ERASMUS
+                            </div>
+                            <div id=materiaisPopUp class=modal>
+                                <div class=contentContainter>
+                                    <span class="close">&times;</span>
+                                    <div class=mainContent>
+                                        <div class=popUpTextContent>
+                                            <div class=popUpTitle>
+                                                FACILITAR ACESSO DE MATERIAIS NECESSÁRIOS
+                                            </div>
+                                            <div class=popUpText>
+                                                Pretendemos, assim, que os alunos possam ter, pelo menos, um desconto de estudante para as licenças dos programas da Adobe. O fornecimento de material atualizado e de qualidade é indispensável para a formação do aluno, propomos, assim, uma substituição por parte do material desatualizado, com a finalidade de atribui uma melhor qualidade de ensino, quer ao aluno quer ao docente. Ex: material fotográfico.
+                                            </div>
+                                        </div>
+                                        <img class=popUpImage src="Imagens/popUpMaterias.jpg"></img>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

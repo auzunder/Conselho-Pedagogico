@@ -93,42 +93,19 @@ header{
 
 #container{
     width: 100%;
+    margin: 0;
 }
 
-
-/* SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR */
-#pesquisa{
-    margin: 10px auto;
-    display: flex;
-    width: 40%;
-    border-bottom: solid black 1px;
-}
-
-#pesquisa > form{
-    display: flex;
-    flex-grow: 1;
-}
-
-#pesquisa > form > *{
-    border: none;
-}
-
-#pesquisa > form > input{
-    flex-grow: 1;
-}
-
-#submitSearch{
-    background-color: transparent;
-    background-image: url(/Imagens/search.png);
-    background-size: 100%;
-    width: 40px;
-    height: 40px;
-}
-/* SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR SEARCHBAR */
 
 /* FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO */
 #mainPhoto > img{
     width: 100%;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+#mainPhoto{
+    margin: 0;
 }
 /* FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO */
 
@@ -295,6 +272,8 @@ header{
 
 .modal {
     display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -356,35 +335,19 @@ header{
     line-height: 75px;
 }
 
-.modal-header {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
-  
-.modal-body {padding: 2px 16px;}
-  
-.modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
-  
-.modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-  
+
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
+}
+
+.contentContainter {
+    position: relative;
+    background-color: #fefefe;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
 }
 
 /* PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA */
