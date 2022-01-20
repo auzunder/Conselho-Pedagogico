@@ -3,26 +3,24 @@ html {
     scroll-behavior:smooth;
 }
 
-/* width */
+/*SCROLL BAR*/
 ::-webkit-scrollbar {
     width: 10px;
 }
-  
-  /* Track */
+
 ::-webkit-scrollbar-track {
     background: #cccccc;
 }
   
-  /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #F9B632;
     border-radius: 5px;
 }
   
-  /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #af8023;
 }
+/*SCROLL BAR*/
 
 body{
     margin: 0;
