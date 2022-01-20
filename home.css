@@ -455,14 +455,6 @@ footer{
 /*Responsive css*/
 
 @media only screen and (max-width: 1400px) {
-    #programa > #frstRow,
-    #programa > #ScndRow{
-    font-size: calc(100vw * 0.013);
-    line-height: calc(100vw * 0.015);
-    }
-}
-
-@media only screen and (max-width: 1400px) {
     #wrapper{
         overflow-x: hidden;
     }
@@ -500,6 +492,22 @@ footer{
     #programa > #frstRow,
     #programa > #ScndRow{
     width: 90%;
+    font-size: calc(100vw * 0.013);
+    line-height: calc(100vw * 0.015);
+    }
+    .popUpImage{
+        width: 50%;
+        margin: 10px 5px;
+        border-radius: 20px;
+    }
+    
+    .popUpText{
+        margin: 16px;
+    }
+    
+    .popUpTitle{
+        font-size: 60px;
+        line-height: 60px;
     }
 }
 
@@ -516,6 +524,22 @@ footer{
     flex-flow: column;
     font-size: calc(100vw * 0.025);
     line-height: calc(100vw * 0.028);
+    }
+    .popUpImage{
+        width: 50%;
+        margin: 10px 5px;
+        border-radius: 20px;
+    }
+    
+    .popUpText{
+        margin: 16px;
+        font-size: calc(100vw * 0.019);
+        line-height: calc(100vw * 0.020);
+    }
+    
+    .popUpTitle{
+        font-size: 60px;
+        line-height: 60px;
     }
 }
 
@@ -608,6 +632,23 @@ footer{
     }
     #quemSomosSobreNos >* >* > img{
         height: calc(100vw * 0.15);
+    }
+    .popUpImage{
+        width: 75%;
+        margin: 10px 5px;
+        border-radius: 20px;
+    }
+    
+    .popUpText{
+        margin: 16px;
+    }
+    
+    .popUpTitle{
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .mainContent{
+        flex-flow: column;
     }
 }
 
