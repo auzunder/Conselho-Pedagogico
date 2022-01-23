@@ -326,7 +326,8 @@ header{
 }
 
 .close:active{
-    background-color: black;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 100%;
 }
 
 .close:hover,
@@ -402,9 +403,6 @@ header{
     flex-flow: column;
 }
 
-#membrosDoConselho >* >* {
-    display: flex;
-}
 /* MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO */
 
 /* SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS */
@@ -436,6 +434,7 @@ header{
 #valores2{
     display: flex;
     flex-grow: 1;
+    flex: 1;
     justify-content: space-around;
     font-weight: 600;
 }
