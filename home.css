@@ -296,27 +296,26 @@ header{
 }
 
 .modal {
-    display: none; /* Hidden by default */
+    display: none; /* Pop-up invisível */
     align-items: center;
     justify-content: center;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed; /* posição fixa */
+    z-index: 1; /* mostrar a frente do conteúdo */
     left: 0;
     top: 0;
     margin: 0;
-    width: 100vw; /* Full width */
-    height: 100vh; /* Full height */
-    overflow: hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100vw; /* ocupar toda a area visivel pelo utilizador */
+    height: 100vh; /* ocupar toda a area visivel pelo utilizador */
+    overflow: hidden; /* Correção de erros de responsividade */
+    background-color: rgba(0,0,0,0.4); /* background levemente escuro */
 }
 
 .contentContainter {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: auto;
     padding: 20px;
     border-radius: 20px;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 85%;
 }
 
 .close {
@@ -326,29 +325,36 @@ header{
     font-weight: bold;
 }
 
+.close:active{
+    background-color: black;
+}
+
 .close:hover,
 .close:focus {
     color: black;
-    text-decoration: none;
     cursor: pointer;
 }
 
 .mainContent, .popUpTextContent{
     display: flex;
-    flex: 1;
     align-items: center;
     gap: 30px;
+    margin: 0;
+}
+
+.mainContent > *{
+    flex: 1; /* Tamanhos de colunas iguais / Imagem e texto */
 }
 
 .popUpTextContent{
-    flex-flow: column;
+    flex-flow: column; /* Título + Texto informativo na vertical */
 }
 
 .popUpImage{
-    width: 50%;
     height: 85%;
     margin: 10px 5px;
-    border-radius: 20px;
+    border-radius: 20px; /* Retângulo arredondado na imagem */
+    overflow: hidden;
 }
 
 .popUpText{
@@ -535,15 +541,13 @@ footer{
         font-size: 70px;
         line-height: 70px;
     }
-    #pesquisa{
-        width: 50%;
-    }
     #programa > #frstRow,
     #programa > #ScndRow{
     flex-flow: column;
     font-size: calc(100vw * 0.025);
     line-height: calc(100vw * 0.028);
     }
+
     .popUpImage{
         width: 50%;
         margin: 10px 5px;
@@ -571,10 +575,6 @@ footer{
         width: 150%;
         justify-content: center;
     }
-    #noticias > #noticiasContent{
-        flex-direction: column;
-        gap: 0.5rem;
-    }
     #noticias > #noticiasContent > #mainContent > * > .image{
         height: calc(100vw * 0.5);
     }
@@ -589,8 +589,9 @@ footer{
         height: calc(100vw * 0.25);
         width: calc(100vw * 0.25);
     }
-    #pesquisa{
-        width: 60%;
+    #noticias > #noticiasContent{
+        flex-direction: column;
+        gap: 0.5rem;
     }
     #sloganRodape{
         font-size: 30px;
@@ -611,6 +612,20 @@ footer{
     }
     #quemSomosSobreNos >* >* > img{
         height: calc(100vw * 0.1);
+    }
+    .popUpImage{
+        width: 65%;
+        border-radius: 20px;
+        margin: 0;
+    }
+    
+    .popUpTitle{
+        font-size: 35px;
+        line-height: 35px;
+        margin: 0;
+    }
+    .mainContent{
+        flex-flow: column;
     }
 }
 
@@ -651,23 +666,6 @@ footer{
     }
     #quemSomosSobreNos >* >* > img{
         height: calc(100vw * 0.15);
-    }
-    .popUpImage{
-        width: 75%;
-        margin: 10px 5px;
-        border-radius: 20px;
-    }
-    
-    .popUpText{
-        margin: 16px;
-    }
-    
-    .popUpTitle{
-        font-size: 35px;
-        line-height: 35px;
-    }
-    .mainContent{
-        flex-flow: column;
     }
 }
 
