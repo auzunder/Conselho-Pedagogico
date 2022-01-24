@@ -1,9 +1,15 @@
+div{
+    margin: 20px 0;
+    /**
+    border: #000000 solid 1px;
+    /**/
+}
 
+/*SCROLL BAR*/
 html {
     scroll-behavior:smooth;
 }
 
-/*SCROLL BAR*/
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -26,6 +32,7 @@ html {
 body{
     margin: 0;
 }
+/*Remoção de Margens do HTML*/
 
 #wrapper{
     margin: 0;
@@ -39,18 +46,6 @@ body{
     line-height: 23px;
 }
 
-header, header >*, header >* >*{
-    display: flex;
-    justify-content: center;
-}
-div{
-    margin: 20px 0;
-    /**
-    border: #000000 solid 1px;
-    /**/
-}
-
-
 /* NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR */
 header{
     top: 0;
@@ -62,11 +57,15 @@ header{
     position: fixed;
 }
 
+header, header >*, header >* >*{
+    display: flex;
+    justify-content: center;
+}
+
 #NavBarPos{
     width: 100%;
     height: 100px;
 }
-
 
 /* LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO LOGO */
 #logo{
@@ -112,14 +111,12 @@ header{
     color: #000000;
 }
 /* LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS LANGUAGE CSS */
-/* NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR */
-
 
 #container{
     width: 100%;
     margin: 0;
 }
-
+/* NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR */
 
 /* FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO FOTOGRAFIA DE GRUPO */
 #mainPhoto > img{
@@ -166,6 +163,7 @@ header{
     animation-timing-function: ease-out;
 }
 
+/* CONTEUDO NOTICIAS */
 #noticias > #noticiasContent{
     margin: 0;
     display: flex;
@@ -177,6 +175,7 @@ header{
     margin: 0;
 }
 
+/* PRIMEIRA NOTICIA */
 #noticias > #noticiasContent > #mainContent{
     display: flex;
     flex-grow: 2;
@@ -200,6 +199,13 @@ header{
     margin-bottom: 0;
 }
 
+#fstImage{
+    height: calc(0.243056*100vw);
+    background-image: url(/Imagens/noticia_1.png);
+}
+/* PRIMEIRA NOTICIA */
+
+/* NOTICIAS SECUNDÁRIAS */
 #noticias > #noticiasContent > #alternativeContent{
     display: flex;
     flex-grow: 1;
@@ -236,16 +242,13 @@ header{
     margin-top: 0;
     margin-bottom: 10px;
 }
+/* NOTICIAS SECUNDÁRIAS */
 
 .image{
     background-size: 100%;
     background-color: gray;
 }
-
-#fstImage{
-    height: calc(0.243056*100vw);
-    background-image: url(/Imagens/noticia_1.png);
-}
+/* CONTEUDO NOTICIAS */
 /* NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS NOTICIAS */
 
 /* PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA */
@@ -298,6 +301,7 @@ header{
     background-size: cover;
 }
 
+/* TRANSIÇÃO ANIMAÇÂO CARTÕES DAS MEDIDAS */
 @keyframes medida {
     from {
         top: 0px;
@@ -327,9 +331,9 @@ header{
     animation-timing-function: ease-out;
 
 }
+/* TRANSIÇÃO ANIMAÇÂO CARTÕES DAS MEDIDAS */
 
 /* IMAGENS NOS CARTÕES DAS MEDIDAS */
-
 #medidaMateriais{
     background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/medidaMaterias.jpg);
 }
@@ -393,11 +397,9 @@ header{
 #medidaErasmus:hover{
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/medidaErasmus.png);
 }
-
 /* IMAGENS NOS CARTÕES DAS MEDIDAS */
 
-
-
+/* STYLING DO POP-UP DAS MEDIDAS */
 .modal {
     display: none; /* Pop-up invisível */
     align-items: center;
@@ -413,14 +415,7 @@ header{
     background-color: rgba(0,0,0,0.4); /* background levemente escuro */
 }
 
-.contentContainter {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border-radius: 20px;
-    width: 85%;
-}
-
+/* STYLING DO BOTÃO DE FECHAR POP-UP */
 .close {
     color: #aaa;
     float: right;
@@ -437,6 +432,28 @@ header{
 .close:focus {
     color: black;
     cursor: pointer;
+}
+/* STYLING DO BOTÃO DE FECHAR POP-UP */
+
+/* ANIMAÇÂO DE ABRIR POP-UP */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+/* ANIMAÇÂO DE ABRIR POP-UP */
+
+/* CONTENT STYLING */
+.contentContainter {
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 85%;
+    position: relative;
+    background-color: #fefefe;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
 }
 
 .mainContent, .popUpTextContent{
@@ -469,27 +486,11 @@ header{
     font-size: 71px;
     line-height: 75px;
 }
-
-
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-}
-
-.contentContainter {
-    position: relative;
-    background-color: #fefefe;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-out;
-}
-
+/* CONTENT STYLING */
+/* STYLING DO POP-UP DAS MEDIDAS */
 /* PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA */
 
 /* MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO */
-
-
 #membrosDoConselho{
     font-size: 18px;
     width: 60%;
@@ -505,7 +506,6 @@ header{
     justify-content: center;
     flex-flow: column;
 }
-
 /* MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO */
 
 /* SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS */
