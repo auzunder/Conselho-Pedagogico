@@ -100,3 +100,21 @@ function correção_separadores(){
 
 window.onload = correção_separadores;
 window.addEventListener("resize", correção_separadores);
+
+
+
+
+document.getElementById("EdgarTavares").onclick = function(){
+    modal = document.getElementById("EdgarTavaresProfile");
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementById("EdgarTavaresCardContent").style.display = "none";
+        }
+    }
+    modal.style.display = "flex";
+    document.getElementById("EdgarTavaresCardContent").style.display = "flex";
+}
+
+
+    

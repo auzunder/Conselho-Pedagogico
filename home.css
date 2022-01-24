@@ -542,6 +542,10 @@ header, header >*, header >* >*{
     justify-content: center;
     flex-flow: column;
 }
+
+.membroConselho > * > img:hover{
+    filter: brightness(0.75);
+}
 /* MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO */
 
 /* SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS */
@@ -571,23 +575,33 @@ header, header >*, header >* >*{
 
 @keyframes membroConselhoAnim {
     from{
-        
+        top: 50vh;
+        right: 0vw;
+        opacity: 0;
     }
     to{
-        
+        top: 0;
+        right: -9vw;
+        opacity: 1;
     }
 }
 
-.membroConselho:hover{
-    /*box-shadow: 0 50px 0 black;
-    position: absolute;*/
-    animation: membroConselhoAnim 1s;
+.cardElemento, 
+.cardElemento > *, 
+.cardElemento > * > *,
+.cardElemento > * > * > *{
+    /*border: solid black 1px;*/
+    margin: 0;
 }
 
 .cardElemento{
+    display: none;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
     position: fixed;
     top: 0;
+    left: 0;
     margin: 0;
     width: 100%;
     height: 100vh;
@@ -595,57 +609,94 @@ header, header >*, header >* >*{
 }
 
 .card .card-header .profile-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 1000px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 8px solid #FC9FF8;
-    box-shadow: 0 0 20px #00000033;
+    position: relative;
+    right: 12.5vw;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 100%;
+    border: 8px solid #8AD0EC;
+    box-shadow: 0 0 50px rgba(138, 208, 236, 0.3);
+    z-index: 4;
 }
 
 .card {
-    position: absolute;
-    max-width: 50vw;
-    margin: 150px auto 0;
-    background-color: #42515a;
-    text-align: center;
+    display: flex;
+    position: relative;
+    right: -9vw;
     font-size: 20px;
-    border-radius: 15px;
+    /*
+    background-color: #50264e;
+    max-width: 75vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 20px #FC9FF8;*/
+    animation: membroConselhoAnim 500ms ease-in-out;
+}
+
+
+@keyframes membroConselhoAnimContent {
+    from{
+        right:25vw;
+        max-width: 12.5vw;
+        opacity: 0;
+        display: none;
+    }
+    to{
+        right: 15vw;
+        max-width: 40vw;
+        opacity: 1;
+        display: flex;
+    }
+}
+
+.card-content{
+    /**/
+    background-color: #50264e;
+    box-shadow: 0 0 50px rgba(252, 159, 248, 0.5);
+    border-radius: 1vw;
+    max-width: 40vw;
+    padding-left: 15vw;
+    position: relative;
+    right: 15vw;
+    /**/
+    display: none;
+    flex: 3;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    animation: membroConselhoAnimContent 500ms ease-in-out;
+}
+
+.card-content::after{
+    max-width: 40vw;
+    right: 15vw;
+    display: flex;
 }
 
 .card .card-header {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    height: 48px;
-}
-
-.card .card-header .profile-img:hover {
-    width: 180px;
-    height: 180px;
-    border: 8px solid #d885af;
+    right: -9vw;
+    width: 25%;
 }
 
 .card .card-body {
-    padding: 10px 40px;
+    padding: 0 4vw;
+    color: white;
+    margin: 0;
 }
 
 .card .card-body .name {
-    margin-top: 30px;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
-    color: #c74385;
-}
-
-.card .card-body .name:hover {
-    margin-top: 30px;
-    font-size: 24px;
-    color: #d885af;
+    color: #8AD0EC;
 }
 
 .card .card-body .mail {
     font-size: 14px;
-    color: #c2bdbd;
+    color: #8AD0EC;
 }
 
 .card .card-body .mail:hover {
@@ -654,51 +705,31 @@ header, header >*, header >* >*{
 }
 
 .card .card-body .job {
-    margin-top: 10px;
     font-size: 14px;
 }
 
 .card .social-links {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    z-index: 4;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 30px;
+    margin: 1rem 0;
 }
 
 .card .social-links .social-icon {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
-    width: 40px;
-    background-color: #c74385;
-    color: #ffffff;
-    font-size: 20px;
+    width: 3vw;
     border-radius: 100%;
-    text-decoration: none;
-    margin: 0 13px 30px 0;
+    border: solid 0.3vw #8AD0EC;
+    background-color: #8AD0EC;
 }
 
-.card .social-links .social-icon:last-child {
-    margin-right: 0;
-}
-
-.card .social-links .social-icon:hover {
-    background-color: #d885af;
-    height: 50px;
-    width: 50px;
-    text-decoration: none;
-}
-
-.card .card-footer {
-    background-color: #c74385;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    padding: 20px 0 20px 0;
-}
-
-.card .card-footer .count {
-    font-size: 14px;
+.card .social-links .social-icon > *{
+    width: 100%;
+    height: 100%;
 }
 
 #valores1, 
