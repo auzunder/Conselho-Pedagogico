@@ -54,6 +54,7 @@ div{
 /* NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR */
 header{
     top: 0;
+    z-index: 1;
     align-items: center;
     width: 100%;
     height: 100px;
@@ -249,22 +250,22 @@ header{
 
 /* PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA */
 #programa{
-    gap: 1rem;
+    gap: 2rem;
 }
 
 #programa > #frstRow,
 #programa > #ScndRow{
     max-width: 75%;
     display: flex;
-    gap: 1.5rem;
-    margin: 0 1.5rem;
+    gap: 2rem;
+    margin: 0 2rem;
     font-size: calc(100vw * 0.015);
     line-height: calc(100vw * 0.02);
 }
 
 #programa > #frstRow > .medidas,
 #programa > #ScndRow > .medidas{
-    gap: 1.5rem;
+    gap: 2rem;
     font-weight: 900;
     flex: 1;
     display: flex;
@@ -276,24 +277,126 @@ header{
 
 #programa > #frstRow > .medidas > .medida,
 #programa > #ScndRow > .medidas > .medida{
-    padding: 30px;
-    font-weight: 900;
-    flex: 1;
-    background-color: #689CB1;
-    height: calc(100vw * 0.16);
-    border-radius: 25px;
     display: flex;
+    margin: 0;
+    padding: 30px;
+    flex: 1;
+    position: relative;
+    z-index: 0;
+
+    font-weight: 900;
+    height: calc(100vw * 0.16);
+    border-radius: 5px;
+    /*border-radius: 25px; */
+
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: 0;
+
+    background-color: #689CB1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes medida {
+    from {
+        top: 0px;
+        left: 0px;
+        box-shadow: 0px 0px 0px #689CB1;
+        color: black;
+    }
+    to {
+        top: -15px;
+        left: -15px;
+        color: white;
+        box-shadow: 15px 15px 0px #689CB1;
+    }
 }
 
 #programa > #frstRow > .medidas > .medida:hover,
 #programa > #ScndRow > .medidas > .medida:hover{
     color: white;
     background-color: #344E59;
+
+    box-shadow: 15px 15px 0px #689CB1;
+    top: -15px;
+    left: -15px;
+
+    animation-name: medida;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+
 }
+
+/* IMAGENS NOS CARTÕES DAS MEDIDAS */
+
+#medidaMateriais{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/medidaMaterias.jpg);
+}
+
+#medidaMateriais:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/medidaMaterias.jpg);
+}
+
+#medidaESEC{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/medidaESEC.png);
+}
+
+#medidaESEC:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/medidaESEC.png);
+}
+
+#medidaCaloiros{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/medidaCaloiros.png);
+}
+
+#medidaCaloiros:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/medidaCaloiros.png);
+}
+
+#medidaCursos{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/medidaCursos.png);
+}
+
+#medidaCursos:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/medidaCursos.png);
+}
+
+#medidaCartao{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/medidaCartão.jpg);
+}
+
+#medidaCartao:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/medidaCartão.jpg);
+}
+
+#medidaHorários{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/medidaHorários.jpg);
+}
+
+#medidaHorários:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/medidaHorários.jpg);
+}
+
+#medidaNovoPolo{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/medidaPolo.png);
+}
+
+#medidaNovoPolo:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/medidaPolo.png);
+}
+
+#medidaErasmus{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/medidaErasmus.png);
+}
+
+#medidaErasmus:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/medidaErasmus.png);
+}
+
+/* IMAGENS NOS CARTÕES DAS MEDIDAS */
+
+
 
 .modal {
     display: none; /* Pop-up invisível */
