@@ -638,13 +638,11 @@ header, header >*, header >* >*{
         right:25vw;
         max-width: 12.5vw;
         opacity: 0;
-        display: none;
     }
     to{
         right: 15vw;
         max-width: 40vw;
         opacity: 1;
-        display: flex;
     }
 }
 
@@ -864,6 +862,99 @@ footer{
     .popUpTitle{
         font-size: 45px;
         line-height: 45px;
+    }
+
+    @keyframes membroConselhoAnim {
+        from{
+            top: 75vh;
+            opacity: 0;
+        }
+        to{
+            top: 12.5vw;
+            opacity: 1;
+        }
+    }
+
+    @keyframes membroConselhoAnimContent {
+        from{
+            max-height: 10vh;
+            opacity: 0;
+        }
+        to{
+            max-height: 40vh;
+            opacity: 1;
+        }
+    }
+
+    .card{
+        flex-flow: column;
+        align-items: center;
+        right: 0;
+        top: 12.5vw;
+    }
+
+    .card .card-header {
+        width: 100%;
+        right: 0;
+
+    }
+    
+    .card .card-header .profile-img {
+        position: initial !important;
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .card-content{
+        align-items: center;
+        right: 0;
+        top: -25vw;
+        padding: 12.5vw 0 0 0;
+        min-width: 350px;
+        width: 80vw;
+        max-width: 80vw;
+        min-height: 50vh;;
+        height: 50vh;
+        max-height: 50vh;;
+    }
+
+    .card .social-links .social-icon {
+        width: 13vw;
+    }
+
+    .card .card-body {
+        padding: 0;
+        width: calc(100% - 8vw);
+        flex-wrap: 1;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        text-align: center;
+        height: 25vh;
+    }
+
+    .card .card-body .name {
+        margin: 1.5vh 0;
+        font-size: 2.75vh;
+        line-height: 2.80vh;
+    }
+
+    .card .card-body .about_card {
+        margin: 1.5vh 0;
+        font-size: 1.5vh;
+        line-height: 1.55vh;
+    }
+
+    .card .card-body .mail, .card .card-body .mail:hover {
+        margin: 1.5vh 0;
+        font-size: 1.4vh;
+        line-height: 1.45vh;
+    }
+
+    .card .card-body .job {
+        margin: 1.5vh 0;
+        font-size: 1.5vh;
+        line-height: 1.55vh;
     }
 }
 
