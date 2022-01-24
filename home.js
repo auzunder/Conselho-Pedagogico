@@ -98,11 +98,74 @@ function correção_separadores(){
     }
 }
 
+
+
 window.onload = correção_separadores;
 window.addEventListener("resize", correção_separadores);
 
 
 
+
+
+document.getElementById("AnaFerreira").onclick = function(){
+    modal = document.getElementById("AnaFerreiraProfile");
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementById("AnaFerreiraCardContent").style.display = "none";
+        }
+    }
+    modal.style.display = "flex";
+    document.getElementById("AnaFerreiraCardContent").style.display = "flex";
+}
+
+document.getElementById("AnnaPaunéSerra").onclick = function(){
+    modal = document.getElementById("AnnaPaunéSerraProfile");
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementById("AnnaPaunéSerraCardContent").style.display = "none";
+        }
+    }
+    modal.style.display = "flex";
+    document.getElementById("AnnaPaunéSerraCardContent").style.display = "flex";
+}
+
+document.getElementById("DavidDias").onclick = function(){
+    modal = document.getElementById("DavidDiasProfile");
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementById("DavidDiasCardContent").style.display = "none";
+        }
+    }
+    modal.style.display = "flex";
+    document.getElementById("DavidDiasCardContent").style.display = "flex";
+}
+
+document.getElementById("DavidTomé").onclick = function(){
+    modal = document.getElementById("DavidToméProfile");
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementById("DavidToméCardContent").style.display = "none";
+        }
+    }
+    modal.style.display = "flex";
+    document.getElementById("DavidToméCardContent").style.display = "flex";
+}
+
+document.getElementById("DominykaIvanovskytė").onclick = function(){
+    modal = document.getElementById("DominykaIvanovskytėProfile");
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementById("DominykaIvanovskytėCardContent").style.display = "none";
+        }
+    }
+    modal.style.display = "flex";
+    document.getElementById("DominykaIvanovskytėCardContent").style.display = "flex";
+}
 
 document.getElementById("EdgarTavares").onclick = function(){
     modal = document.getElementById("EdgarTavaresProfile");
@@ -116,5 +179,17 @@ document.getElementById("EdgarTavares").onclick = function(){
     document.getElementById("EdgarTavaresCardContent").style.display = "flex";
 }
 
+
+document.getElementById("JonathanAraújo").onclick = function(){
+    modal = document.getElementById("JonathanAraújoProfile");
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementById("JonathanAraújoCardContent").style.display = "none";
+        }
+    }
+    modal.style.display = "flex";
+    document.getElementById("JonathanAraújoCardContent").style.display = "flex";
+}
 
     
