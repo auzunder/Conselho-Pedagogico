@@ -163,6 +163,13 @@ header, header >*, header >* >*{
     animation-timing-function: ease-out;
 }
 
+#noticiasMarker, 
+#programaMarker,
+#quemSomosMarker{
+    width: 100%;
+    margin: 0;
+}
+
 /* CONTEUDO NOTICIAS */
 #noticias > #noticiasContent{
     margin: 0;

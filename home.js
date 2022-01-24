@@ -72,3 +72,31 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function correção_separadores(){
+    if (document.getElementById("noticiasMarker").clientWidth < 1400){
+        document.getElementById("noticiasMarker").style.removeProperty("top")
+        document.getElementById("noticiasMarker").style.removeProperty("relative")
+        document.getElementById("noticiasMarker").style.height = (3840 / (document.getElementById("noticiasMarker").clientWidth/2)) + "px";
+        document.getElementById("programaMarker").style.removeProperty("top")
+        document.getElementById("programaMarker").style.removeProperty("relative")
+        document.getElementById("programaMarker").style.height = (3840 / (document.getElementById("programaMarker").clientWidth/2)) + "px";
+        document.getElementById("quemSomosMarker").style.removeProperty("top")
+        document.getElementById("quemSomosMarker").style.removeProperty("relative")
+        document.getElementById("quemSomosMarker").style.height = (3840 / (document.getElementById("quemSomosMarker").clientWidth/2)) + "px";
+    }
+    else{
+        document.getElementById("noticiasMarker").style.top = 5 + "px";
+        document.getElementById("noticiasMarker").style.position = "relative";
+        document.getElementById("noticiasMarker").style.height = "1px";
+        document.getElementById("programaMarker").style.top = 7 + "px";
+        document.getElementById("programaMarker").style.position = "relative";
+        document.getElementById("programaMarker").style.height = "1px";
+        document.getElementById("quemSomosMarker").style.top = 7 + "px";
+        document.getElementById("quemSomosMarker").style.position = "relative";
+        document.getElementById("quemSomosMarker").style.height = "1px";
+    }
+}
+
+window.onload = correção_separadores;
+window.addEventListener("resize", correção_separadores);
