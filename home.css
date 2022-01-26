@@ -349,6 +349,53 @@ header, header >*, header >* >*{
     font-size: 25px;
     line-height: 30px;
 }
+
+/* PAGINA NOTICIA */
+.noticia div{
+    margin: 0;
+}
+
+.noticia{
+    z-index: 1;
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    overflow-x: hidden;
+    left: 0;
+    top: 100px;
+}
+
+.noticiaContainer{
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    width: 100%;
+}
+
+.newsImage{
+    display: flex;
+    width: 100%;
+    border: black solid 2px;
+    position: relative;
+}
+
+.newsImage img{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.newsContent{
+    box-shadow: 0 -10px 50px #000000d5;
+    width: 100%;
+    background-color: white;
+}
+
+
+/* PAGINA NOTICIA */
+
+
 /* NOTICIAS SECUNDÁRIAS */
 
 .image{
