@@ -133,10 +133,6 @@ header, header >*, header >* >*{
     margin-bottom: 50px;
 }
 
-#mainPhoto #imgcontainer{
-    justify-content: center;
-}
-
 #mainPhoto,
 #imgcontainer{
     position: relative;
@@ -144,6 +140,8 @@ header, header >*, header >* >*{
 }
 
 #imgcontainer{
+    display: flex;
+    justify-content: center;
     animation: videoplayerAnim 300ms ease-in-out;
 }
 

@@ -101,10 +101,10 @@ function correção_separadores(){
     var ratio = intFrameWidth / intFrameHeight
     console.log(ratio)
     if (ratio < 1.55) {
-        document.getElementById("closeVideo_01").style.display = "none";
+        document.getElementById("closeVideoBtn").style.display = "none";
     }
     else if (ratio >= 1.55) {
-        document.getElementById("closeVideo_01").style.display = "flex";
+        document.getElementById("closeVideoBtn").style.display = "flex";
     }
 }
 
