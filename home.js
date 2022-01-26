@@ -211,37 +211,25 @@ document.getElementById("closeSecondNews").onclick = function(){
     closeNews(1)
 };
 
-// //Abrir Terceira noticia
-// document.getElementById("terceiraNoticia").onclick = function(){
-//     openNews = true; openNews_03 = true; opennedNews = 2;
-//     document.getElementsByClassName("newsImage")[opennedNews].style.height = (aspectRatio*htmlWidth)+"px"
-//     document.getElementById("closeNewsContainer3").style.top = (aspectRatio*htmlWidth)+"px"
-//     document.getElementById("noticia3").style.display = "flex";
-//     document.getElementById("htmlPage").style.overflowY = "hidden";
-// };
+//Abrir Terceira noticia
+document.getElementById("terceiraNoticia").onclick = function(){
+    openNoticia(2)
+};
 
-// //Fechar Terceira noticia
-// document.getElementById("closeThirdNews").onclick = function(){
-//     openNews_02 = false;
-//     document.getElementById("noticia3").style.display = "none";
-//     document.getElementById("htmlPage").style.overflowY = "scroll";
-// };
+//Fechar Terceira noticia
+document.getElementById("closeThirdNews").onclick = function(){
+    closeNews(2)
+};
 
-// //Abrir Quarta noticia
-// document.getElementById("quartaNoticia").onclick = function(){
-//     openNews = true; openNews_04 = true; opennedNews = 3;
-//     document.getElementsByClassName("newsImage")[opennedNews].style.height = (aspectRatio*htmlWidth)+"px"
-//     document.getElementById("closeNewsContainer4").style.top = (aspectRatio*htmlWidth)+"px"
-//     document.getElementById("noticia4").style.display = "flex";
-//     document.getElementById("htmlPage").style.overflowY = "hidden";
-// };
+//Abrir Quarta noticia
+document.getElementById("quartaNoticia").onclick = function(){
+    openNoticia(3)
+};
 
-// //Fechar Quarta noticia
-// document.getElementById("closeThirdNews").onclick = function(){
-//     openNews_02 = false;
-//     document.getElementById("noticia4").style.display = "none";
-//     document.getElementById("htmlPage").style.overflowY = "scroll";
-// };
+//Fechar Quarta noticia
+document.getElementById("closeFourthNews").onclick = function(){
+    closeNews(3)
+};
    
 
 

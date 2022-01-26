@@ -81,7 +81,7 @@
                         <div id="noticia1"class="noticia" style="display: none;">
                             <div class="noticiaContainer">
                                 <div class="newsImage">
-                                    <img src="Imagens/Noticias/Merch.png">
+                                    <img id="noticia1image" src="Imagens/Noticias/Merch.png">
                                 </div>
                                 <div class="newsContentContainer">
                                     <div class="newsTitle">
@@ -110,21 +110,21 @@
                                                 <p>A Lista está a aceitar doações!</p>
                                             </div>
                                             <script>
-                                                document.getElementById("relatedNewsMerch01").onclick = function (){openNoticia(1);closeNews(0);};
+                                                document.getElementById("relatedNewsMerch01").onclick = function (){closeNews(0);openNoticia(1);};
                                             </script>
                                             <div id="relatedNewsMerch02" class="relatedNews">
                                                 <img src="Imagens/ESEC.png" style="object-fit: contain; background-color: #c4c4c4;">
                                                 <p>Dia 14, começamos a erguer sonhos!</p>
                                             </div>
                                             <script>
-                                                document.getElementById("relatedNewsMerch02").onclick = function (){openNoticia(2);closeNews(0);};
+                                                document.getElementById("relatedNewsMerch02").onclick = function (){closeNews(0);openNoticia(2);};
                                             </script>
                                             <div id="relatedNewsMerch03" class="relatedNews">
                                                 <img>
                                                 <p>Dia 28, VOTA B!</p>
                                             </div>
                                             <script>
-                                                document.getElementById("relatedNewsMerch03").onclick = function (){openNoticia(3);closeNews(0);};
+                                                document.getElementById("relatedNewsMerch03").onclick = function (){closeNews(0);openNoticia(3);};
                                             </script>
                                         </div>
                                     </div>
@@ -175,21 +175,21 @@
                                                     <p>Lista B anuncia a sua merch!</p>
                                                 </div>
                                                 <script>
-                                                    document.getElementById("relatedNewsPayPal01").onclick = function () {openNoticia(0);closeNews(1);};
+                                                    document.getElementById("relatedNewsPayPal01").onclick = function () {closeNews(1);openNoticia(0);};
                                                 </script>
                                                 <div id="relatedNewsPayPal02" class="relatedNews">
                                                     <img src="Imagens/ESEC.png" style="object-fit: contain; background-color: #c4c4c4;">
                                                     <p>Dia 14, começamos a erguer sonhos!</p>
                                                 </div>
                                                 <script>
-                                                    document.getElementById("relatedNewsPayPal02").onclick = function () {openNoticia(2);closeNews(1);}
+                                                    document.getElementById("relatedNewsPayPal02").onclick = function () {closeNews(1);openNoticia(2);}
                                                 </script>
                                                 <div id="relatedNewsPayPal03" class="relatedNews">
                                                     <img>
                                                     <p>Dia 28, VOTA B!</p>
                                                 </div>
                                                 <script>
-                                                    document.getElementById("relatedNewsPayPal03").onclick = function () {openNoticia(3);closeNews(1);}
+                                                    document.getElementById("relatedNewsPayPal03").onclick = function () {closeNews(1);openNoticia(3);}
                                                 </script>
                                             </div>
                                         </div>
@@ -208,8 +208,56 @@
                                     <p>A nossa campanha eleitoral começa já esta semana, no dia 14 de janeiro (sexta-feira). A partir de sexta-feira poderás ter acesso ao nosso programa eleitoral, atividades com os nossos membros e até comprar brindes e acessórios da tua lista!</p>
                                 </div>
                             </div>
-                            <div id="noticia3"class="noticia" style="display: none;">
-                                
+                            <div id="noticia3"class="noticia" style="display: none; min-width: 100vh;">
+                                <div class="noticiaContainer">
+                                    <div class="newsImage" style="background-color: rgb(44 44 44); border-bottom: 2px solid #F9B632;">
+                                        <img id="noticia3image" src="Imagens/Noticias/ESECBanner.png" style="object-fit: contain; width: 70%;">
+                                    </div>
+                                    <div class="newsContentContainer">
+                                        <div class="newsTitle">
+                                            <h1>Dia 14, começamos a erguer sonhos!</h1>
+                                        </div>
+                                        <div class="newsContent">
+                                            <p>A nossa campanha eleitoral começa já esta semana, no dia 14 de janeiro (sexta-feira). Coloca já um lembrete no calendário!</p>
+                                            <div class="newsContentImages">
+                                                <img src="Imagens/Noticias/happyPeople.jpg">
+                                                <img src="Imagens/Noticias/Juntos.jpg">
+                                            </div>
+                                            <p>A partir de sexta-feira poderás ter acesso ao nosso programa eleitoral, atividades com os nossos membros e até comprar brindes e acessórios da tua lista!</p>
+                                        </div>
+                                        <div class="otherNews">
+                                            <h2>Notícias Relacionadas</h2>
+                                            <div class=otherNewsContent>
+                                                <div id="relatedNewsErguer01" class="relatedNews">
+                                                    <img src="/Imagens/Noticias/Merch.png">
+                                                    <p>Lista B anuncia a sua merch!</p>
+                                                </div>
+                                                <script>
+                                                    document.getElementById("relatedNewsErguer01").onclick = function () {closeNews(2);openNoticia(0);};
+                                                </script>
+                                                <div id="relatedNewsErguer02" class="relatedNews">
+                                                    <img src="Imagens/Noticias/PayPal.jpg" style="object-fit: cover; background-color: #c4c4c4;">
+                                                    <p>A Lista está a aceitar doações!</p>
+                                                </div>
+                                                <script>
+                                                    document.getElementById("relatedNewsErguer02").onclick = function () {closeNews(2);openNoticia(1);}
+                                                </script>
+                                                <div id="relatedNewsErguer03" class="relatedNews">
+                                                    <img>
+                                                    <p>Dia 28, VOTA B!</p>
+                                                </div>
+                                                <script>
+                                                    document.getElementById("relatedNewsErguer03").onclick = function () {closeNews(2);openNoticia(3);}
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id=closeNewsContainer3 class="closeNewsContainer">
+                                    <div id=closeThirdNews class="closeVideo closeNews">
+                                        <p>Fechar Notícia</p>
+                                    </div>
+                                </div>
                             </div>
                             <div id=quartaNoticia class="altNot pointer">
                                 <div id=fthImage class=image></div>
@@ -219,7 +267,53 @@
                                 </div>
                             </div>
                             <div id="noticia4"class="noticia" style="display: none;">
-                                
+                                <div class="noticiaContainer">
+                                    <div class="newsImage">
+                                        <img id="noticia4image" src="Imagens/Noticias/Merch.png">
+                                    </div>
+                                    <div class="newsContentContainer">
+                                        <div class="newsTitle">
+                                            <h1>Dia 28, VOTA B!</h1>
+                                        </div>
+                                        <div class="newsContent">
+                                            <p>No dia das votações para o conselho pedagógico na ESEC, apelamos ao teu voto, mas principalmente, apelamos a um voto consciente, que tenha em conta os objetivos da lista e fundamentalmente as propostas que possam melhorar o bom funcionamento da nossa escola.</p>
+                                            <div class="newsContentCartaz">
+                                                <img src="Imagens/Merch/garrafaMetal.png">
+                                            </div>
+                                        </div>
+                                        <div class="otherNews">
+                                            <h2>Notícias Relacionadas</h2>
+                                            <div class=otherNewsContent>
+                                                <div id="relatedNewsVote01" class="relatedNews">
+                                                    <img src=/Imagens/Noticias/Paypal.jpg>
+                                                    <p>A Lista está a aceitar doações!</p>
+                                                </div>
+                                                <script>
+                                                    document.getElementById("relatedNewsVote01").onclick = function (){closeNews(0);openNoticia(1);};
+                                                </script>
+                                                <div id="relatedNewsVote02" class="relatedNews">
+                                                    <img src="Imagens/ESEC.png" style="object-fit: contain; background-color: #c4c4c4;">
+                                                    <p>Dia 14, começamos a erguer sonhos!</p>
+                                                </div>
+                                                <script>
+                                                    document.getElementById("relatedNewsVote02").onclick = function (){closeNews(0);openNoticia(2);};
+                                                </script>
+                                                <div id="relatedNewsVote03" class="relatedNews">
+                                                    <img>
+                                                    <p>Dia 28, VOTA B!</p>
+                                                </div>
+                                                <script>
+                                                    document.getElementById("relatedNewsVote03").onclick = function (){closeNews(0);openNoticia(3);};
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id=closeNewsContainer4 class="closeNewsContainer">
+                                    <div id=closeFourthNews class="closeVideo closeNews">
+                                        <p>Fechar Notícia</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
