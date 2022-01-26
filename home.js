@@ -1,5 +1,31 @@
+// ABRIR E FECHAR VIDEO - ABRIR E FECHAR VIDEO - ABRIR E FECHAR VIDEO - ABRIR E FECHAR VIDEO
+document.getElementById("openVideoBtn").onclick = function(){
+    document.getElementById("imgcontainer").style.display = "none";
+    document.getElementById("openVideoBtn").style.display = "none";
+    document.getElementById("closeVideoBtn").style.display = "flex";
+    document.getElementById("videoplay").style.display = "flex";
+};
+
+document.getElementById("closeVideoBtn").onclick = function(){
+    var videos = document.querySelectorAll('iframe, video');
+    Array.prototype.forEach.call(videos, function (video) {
+        if (video.tagName.toLowerCase() === 'video') {
+            video.pause();
+        } else {
+            var src = video.src;
+            video.src = src;
+        }
+    });
+    document.getElementById("videoplay").style.display = "none";
+    document.getElementById("closeVideoBtn").style.display = "none";
+    document.getElementById("openVideoBtn").style.display = "flex";
+    document.getElementById("imgcontainer").style.display = "flex";
+};
 
 
+
+
+// ABRIR E FECHAR POPUP MEDIDAS - ABRIR E FECHAR POPUP MEDIDAS 
 var btn_01 = document.getElementById("medidaMateriais");
 var btn_02 = document.getElementById("medidaESEC");
 var btn_03 = document.getElementById("medidaCaloiros");
@@ -8,7 +34,6 @@ var btn_05 = document.getElementById("medidaCartao");
 var btn_06 = document.getElementById("medidaHorários");
 var btn_07 = document.getElementById("medidaNovoPolo");
 var btn_08 = document.getElementById("medidaErasmus");
-
 
 btn_01.onclick = function(){
     modal = document.getElementById("materiaisPopUp");
@@ -66,13 +91,14 @@ btn_08.onclick = function(){
     };
     modal.style.display = "flex";
 }
-
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
 
+
+//  CORREÇÃO DE MEDIDAS, SEPARADORES E HIPERLINKS - CORREÇÃO DE MEDIDAS SEPARADORES E HIPERLINKS - CORREÇÃO DE MEDIDAS SEPARADORES E HIPERLINKS
 function correção_separadores(){
     if (document.getElementById("noticiasMarker").clientWidth < 1400){
         document.getElementById("noticiasMarker").style.removeProperty("top")
@@ -97,11 +123,9 @@ function correção_separadores(){
         document.getElementById("quemSomosMarker").style.height = "1px";
     };
 
-
     var intFrameHeight = self.innerHeight;
     var intFrameWidth = self.innerWidth;
     var ratio = intFrameWidth / intFrameHeight
-    console.log(ratio)
     if (ratio < 1.55) {
         document.getElementById("closeVideoBtn").style.display = "none";
     }
@@ -109,30 +133,121 @@ function correção_separadores(){
         document.getElementById("closeVideoBtn").style.display = "flex";
     };
 
-
+    htmlWidth = document.getElementById("htmlPage").clientWidth;
     if (openNews == true){
+        document.getElementsByClassName("newsImage")[opennedNews].style.minHeight = (aspectRatio*htmlWidth)+"px"
         document.getElementsByClassName("newsImage")[opennedNews].style.height = (aspectRatio*htmlWidth)+"px";
-    }
+        document.getElementById("closeNewsContainer").style.top = (aspectRatio*htmlWidth)+"px"
+        console.log("opennedNews: " + opennedNews + "\n(aspectRatio*htmlWidth)+'px'" +(aspectRatio*htmlWidth)+"px")
+    };
 }
 
 var htmlWidth = document.getElementById("htmlPage").clientWidth;
 var aspectRatio = 2000/5500
 var openNews = false
-var opennedNews = 0
-document.getElementById("primeiraNoticia").onclick = function(){
-    openNews = true
-    opennedNews = 0
-    document.getElementsByClassName("newsImage")[opennedNews].style.height = (aspectRatio*htmlWidth)+"px"
-    document.getElementById("noticia1").style.display = "flex";
+var opennedNews
+var id_open
+var id_close
+
+function openNoticia(noticia){
+    openNews = true; 
+    if (noticia == 0){
+        id_open = "noticia1"
+        id_close = "closeNewsContainer1"
+    }
+    else if (noticia == 1){
+        id_open = "noticia2"
+        id_close = "closeNewsContainer2"
+    }
+    else if (noticia == 2){
+        id_open = "noticia3"
+        id_close = "closeNewsContainer3"
+    }
+    else if (noticia == 3){
+        id_open = "noticia4"
+        id_close = "closeNewsContainer4"
+    }
+    document.getElementsByClassName("newsImage")[noticia].style.minHeight = (aspectRatio*htmlWidth)+"px"
+    document.getElementsByClassName("newsImage")[noticia].style.height = (aspectRatio*htmlWidth)+"px"
+    document.getElementById(id_close).style.top = (aspectRatio*htmlWidth)+"px"
+    document.getElementById(id_open).style.display = "flex";
     document.getElementById("htmlPage").style.overflowY = "hidden";
 };
+
+function closeNews(noticia) {
+    openNews = false;
+    if (noticia == 0){
+        id_open = "noticia1"
+    }
+    else if (noticia == 1){
+        id_open = "noticia2"
+    }
+    else if (noticia == 2){
+        id_open = "noticia3"
+    }
+    else if (noticia == 3){
+        id_open = "noticia4"
+    }
+    document.getElementById(id_open).style.display = "none";
+    document.getElementById("htmlPage").style.overflowY = "scroll";
+}
+
+//Abrir primeira noticia
+document.getElementById("primeiraNoticia").onclick = function (){
+    openNoticia(0)
+};
+//Fechar Primeira noticia
+document.getElementById("closeFirstNews").onclick = function (){
+    closeNews(0)
+};
+
+//Abrir Segunda noticia
+document.getElementById("segundaNoticia").onclick = function(){
+    openNoticia(1)
+};
+
+//Fechar Segunda noticia
+document.getElementById("closeSecondNews").onclick = function(){
+    closeNews(1)
+};
+
+// //Abrir Terceira noticia
+// document.getElementById("terceiraNoticia").onclick = function(){
+//     openNews = true; openNews_03 = true; opennedNews = 2;
+//     document.getElementsByClassName("newsImage")[opennedNews].style.height = (aspectRatio*htmlWidth)+"px"
+//     document.getElementById("closeNewsContainer3").style.top = (aspectRatio*htmlWidth)+"px"
+//     document.getElementById("noticia3").style.display = "flex";
+//     document.getElementById("htmlPage").style.overflowY = "hidden";
+// };
+
+// //Fechar Terceira noticia
+// document.getElementById("closeThirdNews").onclick = function(){
+//     openNews_02 = false;
+//     document.getElementById("noticia3").style.display = "none";
+//     document.getElementById("htmlPage").style.overflowY = "scroll";
+// };
+
+// //Abrir Quarta noticia
+// document.getElementById("quartaNoticia").onclick = function(){
+//     openNews = true; openNews_04 = true; opennedNews = 3;
+//     document.getElementsByClassName("newsImage")[opennedNews].style.height = (aspectRatio*htmlWidth)+"px"
+//     document.getElementById("closeNewsContainer4").style.top = (aspectRatio*htmlWidth)+"px"
+//     document.getElementById("noticia4").style.display = "flex";
+//     document.getElementById("htmlPage").style.overflowY = "hidden";
+// };
+
+// //Fechar Quarta noticia
+// document.getElementById("closeThirdNews").onclick = function(){
+//     openNews_02 = false;
+//     document.getElementById("noticia4").style.display = "none";
+//     document.getElementById("htmlPage").style.overflowY = "scroll";
+// };
+   
 
 
 
 window.onload = correção_separadores;
 window.addEventListener("resize", correção_separadores);
-
-
 
 
 

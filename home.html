@@ -42,40 +42,23 @@
             
             <div id=container>
                 <div id=navBarSpacing style="height: 100px; margin: 0;"></div>
+                <div id="buttonVideo">
+                    <div id=closeVideoBtn class="closeVideo">
+                        <p>Fechar</p>
+                    </div>
+                    <div id=openVideoBtn class="closeVideo">
+                        <p>Abrir Video</p>
+                    </div>
+                </div>
                 <div id=mainPhoto>
                     <div id=imgcontainer>
                         <img src="Imagens/MainPhoto.svg">
-                        <div id=openVideoBtn class="closeVideo">
-                            <p>Abrir Video</p>
-                        </div>
                     </div>
                     <div id="videoplay">
-                        <div id=closeVideoBtn class="closeVideo">
-                            <p>Fechar</p>
-                        </div>
                         <div id="videoBackground"></div>
                         <iframe src="https://player.vimeo.com/video/669972866?h=af6d5d5212&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position: relative;top: 0;left: 0;height: 100%;max-width: 100%;display: flex;flex-grow: 8;" title="BE PART OF THE CHANGE - Lista B"></iframe>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
                     </div>
-                    <script>
-                        document.getElementById("openVideoBtn").onclick = function(){
-                            document.getElementById("imgcontainer").style.display = "none";
-                            document.getElementById("videoplay").style.display = "flex";
-                        };
-                        document.getElementById("closeVideoBtn").onclick = function(){
-                            var videos = document.querySelectorAll('iframe, video');
-                            Array.prototype.forEach.call(videos, function (video) {
-                                if (video.tagName.toLowerCase() === 'video') {
-                                    video.pause();
-                                } else {
-                                    var src = video.src;
-                                    video.src = src;
-                                }
-                            });
-                            document.getElementById("videoplay").style.display = "none";
-                            document.getElementById("imgcontainer").style.display = "flex";
-                        };
-                    </script>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
                 <div id=slogan>
                     <img src="/Imagens/Slogan.svg">
@@ -92,7 +75,7 @@
                                     <img src=/Imagens/Noticias/Merch.png>
                                 </div>
                                 <h2>Lista B anuncia a sua merch!</h2>
-                                <p>Desde o inicio da criação da lista, os elementos do grupo estavam com o desejo que criar merchandising para o seu publico. Entretanto isto levou a que hoje tenha sido anunciada a venda dos produtos deles! Adequira já o seu produto! Entre em contacto com um dos elementos da lista, ou contacte pelas redes sociais para obter um.</p>
+                                <p>Desde o inicio da criação da lista, tínhamos a ambição que criar merchandising para o nosso público. Hoje anunciamos a venda dos nossos produtos! Adequira já o seu produto! Entre em contacto com um dos elementos da lista, ou contacte pelas redes sociais para obter um.</p>
                             </div>
                         </div>
                         <div id="noticia1"class="noticia" style="display: none;">
@@ -100,9 +83,56 @@
                                 <div class="newsImage">
                                     <img src="Imagens/Noticias/Merch.png">
                                 </div>
-                                <div class="newsContent">
-                                    <h1>Lista B anuncia a sua merch!</h1>
-                                    <p>Apresentamos a nossa coleção de merchandising e brindes para te vestires a rigor e apoiares a melhor lista candidata ao conselho pedagógico! Podes encontrar nesta maravilhosa coleção uma variedade única de artigos, como por exemplo, garrafas de água reutilizáveis, pensando obviamente no ambiente e nos problemas ambientais que o mundo enfrenta devido ao uso excessivo de plástico. Também podes encontrar toothe bags, para transportares os teus itens com um estilo notório e autêntico, e já sabes, garante já os teus stickers para personalizares o que tu quiseres com um toque diferenciado, de uma lista diferenciada.</p>
+                                <div class="newsContentContainer">
+                                    <div class="newsTitle">
+                                        <h1>Lista B anuncia a sua merch!</h1>
+                                    </div>
+                                    <div class="newsContent">
+                                        <p>Desde o inicio da criação da lista, tínhamos a ambição que criar merchandising para o nosso público. Hoje anunciamos a venda dos nossos produtos!</p>
+                                        <p>Apresentamos a nossa coleção de merchandising e brindes para te vestires a rigor e apoiares a melhor lista candidata ao conselho pedagógico!</p>
+                                        <div class="newsContentImages">
+                                            <img src="Imagens/Merch/garrafaMetal.png">
+                                            <img src="Imagens/Merch/toteBag.jpeg">
+                                        </div>  
+                                        <p>Podes encontrar nesta maravilhosa coleção uma variedade única de artigos, como por exemplo, garrafas de água reutilizáveis, pensando obviamente no ambiente e nos problemas ambientais que o mundo enfrenta devido ao uso excessivo de plástico. Também podes encontrar toothe bags, para transportares os teus itens com um estilo notório e autêntico.</p>
+                                        <div class="newsContentImages">
+                                            <img src="Imagens/Merch/correiaDeTecido.png" id="correiaTecido">
+                                            <img src="Imagens/Merch/stickerVotaB.png" id="sticker">
+                                        </div> 
+                                        <p>Por falar em estilo, temos correias de tecido para levares as tuas chaves, telemóvel ou o que quiseres ao pescoço, e já sabes, garante já os teus stickers para personalizares o que tu quiseres com um toque diferenciado, de uma lista diferenciada.</p>
+                                        <p>Adequira já o seu produto! Entre em contacto com um dos elementos da lista, ou contacte pelas redes sociais para obter um.</p>
+                                    </div>
+                                    <div class="otherNews">
+                                        <h2>Notícias Relacionadas</h2>
+                                        <div class=otherNewsContent>
+                                            <div id="relatedNewsMerch01" class="relatedNews">
+                                                <img src=/Imagens/Noticias/Paypal.jpg>
+                                                <p>A Lista está a aceitar doações!</p>
+                                            </div>
+                                            <script>
+                                                document.getElementById("relatedNewsMerch01").onclick = function (){openNoticia(1);closeNews(0);};
+                                            </script>
+                                            <div id="relatedNewsMerch02" class="relatedNews">
+                                                <img src="Imagens/ESEC.png" style="object-fit: contain; background-color: #c4c4c4;">
+                                                <p>Dia 14, começamos a erguer sonhos!</p>
+                                            </div>
+                                            <script>
+                                                document.getElementById("relatedNewsMerch02").onclick = function (){openNoticia(2);closeNews(0);};
+                                            </script>
+                                            <div id="relatedNewsMerch03" class="relatedNews">
+                                                <img>
+                                                <p>Dia 28, VOTA B!</p>
+                                            </div>
+                                            <script>
+                                                document.getElementById("relatedNewsMerch03").onclick = function (){openNoticia(3);closeNews(0);};
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id=closeNewsContainer1 class="closeNewsContainer">
+                                <div id=closeFirstNews class="closeVideo closeNews">
+                                    <p>Fechar Notícia</p>
                                 </div>
                             </div>
                         </div>
@@ -111,37 +141,75 @@
                                 <div id=sndImage class=image><img src=/Imagens/Noticias/Paypal.jpg></div>
                                 <div class="text">
                                     <h2>A Lista está a aceitar doações!</h2>
-                                    <p>A lista B, concorrente ao conselho pedagógico, está aberta a doações via <strong>Paypal</strong> ou <strong>crypto</strong>. A lista quer mostrar que com a ajuda de tode alcaçar mais além nas suas medidas e ajudar financeiramente a escola com projetos relacionados/impostos por eles.</p>
+                                    <p>A lista B, concorrente ao conselho pedagógico, está aberta a doações via <strong>Paypal</strong> ou <strong>crypto</strong>. A lista quer mostrar que com a ajuda de todos pode alcaçar mais além nas suas medidas e ajudar financeiramente a escola com projetos relacionados/impostos por eles.</p>
                                 </div>
                             </div>
-                            <div id="noticia2"class="noticia" style="display: none;">
+                            <div id="noticia2" class="noticia" style="display: none;">
                                 <div class="noticiaContainer">
-                                    <div class="newsImage">
-                                        <img src="Imagens/Noticias/Merch.png">
+                                    <div class="newsImage" style="background-color: #8AD0EC;">
+                                        <img id="noticia2image" src="Imagens/Noticias/PayPal.svg">
                                     </div>
-                                    <div class="newsContent">
-                                        <h1>Lista B anuncia a sua merch!</h1>
-                                        <p>Apresentamos a nossa coleção de merchandising e brindes para te vestires a rigor e apoiares a melhor lista candidata ao conselho pedagógico! Podes encontrar nesta maravilhosa coleção uma variedade única de artigos, como por exemplo, garrafas de água reutilizáveis, pensando obviamente no ambiente e nos problemas ambientais que o mundo enfrenta devido ao uso excessivo de plástico. Também podes encontrar toothe bags, para transportares os teus itens com um estilo notório e autêntico, e já sabes, garante já os teus stickers para personalizares o que tu quiseres com um toque diferenciado, de uma lista diferenciada.</p>
+                                    <div class="newsContentContainer">
+                                        <div class="newsTitle">
+                                            <h1>A Lista está a aceitar doações!</h1>
+                                        </div>
+                                        <div class="newsContent">
+                                            <p>A lista B, concorrente ao conselho pedagógico, decidiu aceitar doações de todo e qualquer aluno que faça parte da ESEC e esteja disposto a ajudar na implementação das medidas propostas por nós.</p>
+                                            <p>Após ser eleita a lista para o conselho de escolas, iremos publicar uma nova notícia sobre e como podem doar.</p>
+                                            <p>As doações vão poder ser feitas via <strong>Paypal</strong>, <strong>transferência bancária</strong>, ou <strong>crypto moedas</strong>. A lista quer mostrar que com a ajuda de todos pode mais além nas suas medidas e ajudar financeiramente a escola com projetos relacionados/impostos por eles.</p>
+                                            <div class="newsContentImages">
+                                                <img src="Imagens/Noticias/Euro.jpg">
+                                                <img src="Imagens/Noticias/Bitcoin.jpg">
+                                            </div>
+                                            <p>Estaremos abertos a aceitar Bitcoin, Ethereum e Dogecoin. Todas as contas de doações terão as transações e saldo públicos, criando transferência entre a lista e aqueles que ajudam financeiramente.</p>
+                                            <div class="newsContentImages">
+                                                <img src="Imagens/Noticias/Ethereum.jpg">
+                                                <img src="Imagens/Noticias/DogeCoin.jpg">
+                                            </div>
+                                        </div>
+                                        <div class="otherNews">
+                                            <h2>Notícias Relacionadas</h2>
+                                            <div class=otherNewsContent>
+                                                <div id="relatedNewsPayPal01" class="relatedNews">
+                                                    <img src="/Imagens/Noticias/Merch.png">
+                                                    <p>Lista B anuncia a sua merch!</p>
+                                                </div>
+                                                <script>
+                                                    document.getElementById("relatedNewsPayPal01").onclick = function () {openNoticia(0);closeNews(1);};
+                                                </script>
+                                                <div id="relatedNewsPayPal02" class="relatedNews">
+                                                    <img src="Imagens/ESEC.png" style="object-fit: contain; background-color: #c4c4c4;">
+                                                    <p>Dia 14, começamos a erguer sonhos!</p>
+                                                </div>
+                                                <script>
+                                                    document.getElementById("relatedNewsPayPal02").onclick = function () {openNoticia(2);closeNews(1);}
+                                                </script>
+                                                <div id="relatedNewsPayPal03" class="relatedNews">
+                                                    <img>
+                                                    <p>Dia 28, VOTA B!</p>
+                                                </div>
+                                                <script>
+                                                    document.getElementById("relatedNewsPayPal03").onclick = function () {openNoticia(3);closeNews(1);}
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id=closeNewsContainer2 class="closeNewsContainer">
+                                    <div id=closeSecondNews class="closeVideo closeNews">
+                                        <p>Fechar Notícia</p>
                                     </div>
                                 </div>
                             </div>
                             <div id=terceiraNoticia class="altNot pointer">
-                                <div id=trdImage class=image></div>
+                                <div id=trdImage class=image style="background-color: white;"><img src="Imagens/ESEC.png"></div>
                                 <div class="text">
                                     <h2>Dia 14, começamos a erguer sonhos!</h2>
                                     <p>A nossa campanha eleitoral começa já esta semana, no dia 14 de janeiro (sexta-feira). A partir de sexta-feira poderás ter acesso ao nosso programa eleitoral, atividades com os nossos membros e até comprar brindes e acessórios da tua lista!</p>
                                 </div>
                             </div>
                             <div id="noticia3"class="noticia" style="display: none;">
-                                <div class="noticiaContainer">
-                                    <div class="newsImage">
-                                        <img src="Imagens/Noticias/Merch.png">
-                                    </div>
-                                    <div class="newsContent">
-                                        <h1>Lista B anuncia a sua merch!</h1>
-                                        <p>COLOCA AQUI O TEXTO SOBRE A NOTICIA. COLOCA TUDO EU DEPOIS FORMATO</p>
-                                    </div>
-                                </div>
+                                
                             </div>
                             <div id=quartaNoticia class="altNot pointer">
                                 <div id=fthImage class=image></div>
@@ -151,15 +219,7 @@
                                 </div>
                             </div>
                             <div id="noticia4"class="noticia" style="display: none;">
-                                <div class="noticiaContainer">
-                                    <div class="newsImage">
-                                        <img src="Imagens/Noticias/Merch.png">
-                                    </div>
-                                    <div class="newsContent">
-                                        <h1>Lista B anuncia a sua merch!</h1>
-                                        <p>COLOCA AQUI O TEXTO SOBRE A NOTICIA. COLOCA TUDO EU DEPOIS FORMATO</p>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
