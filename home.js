@@ -96,6 +96,16 @@ function correção_separadores(){
         document.getElementById("quemSomosMarker").style.position = "relative";
         document.getElementById("quemSomosMarker").style.height = "1px";
     }
+    var intFrameHeight = self.innerHeight;
+    var intFrameWidth = self.innerWidth;
+    var ratio = intFrameWidth / intFrameHeight
+    console.log(ratio)
+    if (ratio < 1.55) {
+        document.getElementById("closeVideo_01").style.display = "none";
+    }
+    else if (ratio >= 1.55) {
+        document.getElementById("closeVideo_01").style.display = "flex";
+    }
 }
 
 

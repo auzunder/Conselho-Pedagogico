@@ -43,7 +43,39 @@
             <div id=container>
                 <div id=navBarSpacing style="height: 100px; margin: 0;"></div>
                 <div id=mainPhoto>
-                    <img src="Imagens/MainPhoto.svg">
+                    <div id=imgcontainer>
+                        <img src="Imagens/MainPhoto.svg">
+                        <div id=openVideoBtn class="closeVideo">
+                            <p>Abrir Video</p>
+                        </div>
+                    </div>
+                    <div id="videoplay">
+                        <div id=closeVideoBtn class="closeVideo">
+                            <p>Fechar</p>
+                        </div>
+                        <div id="videoBackground"></div>
+                        <iframe src="https://player.vimeo.com/video/669972866?h=af6d5d5212&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position: relative;top: 0;left: 0;height: 100%;max-width: 100%;display: flex;flex-grow: 8;" title="BE PART OF THE CHANGE - Lista B"></iframe>
+                    </div>
+                    <script>
+                        document.getElementById("openVideoBtn").onclick = function(){
+                            document.getElementById("imgcontainer").style.display = "none";
+                            document.getElementById("videoplay").style.display = "flex";
+                        };
+                        document.getElementById("closeVideoBtn").onclick = function(){
+                            var videos = document.querySelectorAll('iframe, video');
+                            Array.prototype.forEach.call(videos, function (video) {
+                                if (video.tagName.toLowerCase() === 'video') {
+                                    video.pause();
+                                } else {
+                                    var src = video.src;
+                                    video.src = src;
+                                }
+                            });
+                            document.getElementById("videoplay").style.display = "none";
+                            document.getElementById("imgcontainer").style.display = "flex";
+                        };
+                    </script>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
                 <div id=slogan>
                     <img src="/Imagens/Slogan.svg">
