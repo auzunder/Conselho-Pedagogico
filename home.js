@@ -135,10 +135,21 @@ function correção_separadores(){
 
     htmlWidth = document.getElementById("htmlPage").clientWidth;
     if (openNews == true){
+        if (opennedNews == 0){
+            id_close = "closeNewsContainer1"
+        }
+        else if (opennedNews == 1){
+            id_close = "closeNewsContainer2"
+        }
+        else if (opennedNews == 2){
+            id_close = "closeNewsContainer3"
+        }
+        else if (opennedNews == 3){
+            id_close = "closeNewsContainer4"
+        }
         document.getElementsByClassName("newsImage")[opennedNews].style.minHeight = (aspectRatio*htmlWidth)+"px"
         document.getElementsByClassName("newsImage")[opennedNews].style.height = (aspectRatio*htmlWidth)+"px";
-        document.getElementById("closeNewsContainer").style.top = (aspectRatio*htmlWidth)+"px"
-        console.log("opennedNews: " + opennedNews + "\n(aspectRatio*htmlWidth)+'px'" +(aspectRatio*htmlWidth)+"px")
+        document.getElementById(id_close).style.top = (aspectRatio*htmlWidth)+"px"
     };
 }
 
@@ -150,7 +161,8 @@ var id_open
 var id_close
 
 function openNoticia(noticia){
-    openNews = true; 
+    openNews = true;
+    opennedNews = noticia
     if (noticia == 0){
         id_open = "noticia1"
         id_close = "closeNewsContainer1"
