@@ -1,0 +1,259 @@
+/* PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA */
+#programa{
+    gap: 2rem;
+}
+
+#programa > #frstRow,
+#programa > #ScndRow{
+    max-width: 75%;
+    display: flex;
+    gap: 2rem;
+    margin: 0 2rem;
+    font-size: calc(100vw * 0.015);
+    line-height: calc(100vw * 0.02);
+}
+
+#programa > #frstRow > .medidas,
+#programa > #ScndRow > .medidas{
+    gap: 2rem;
+    font-weight: 900;
+    flex: 1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#programa > #frstRow > .medidas > .medida,
+#programa > #ScndRow > .medidas > .medida{
+    display: flex;
+    margin: 0;
+    padding: 30px;
+    flex: 1;
+    position: relative;
+    z-index: 0;
+
+    font-weight: 900;
+    height: calc(100vw * 0.16);
+    border-radius: 5px;
+    /*border-radius: 25px; */
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #689CB1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* TRANSIÇÃO ANIMAÇÂO CARTÕES DAS MEDIDAS */
+@keyframes medida {
+    from {
+        top: 0px;
+        left: 0px;
+        color: black;
+    }
+    to {
+        top: -15px;
+        left: -15px;
+        color: white;
+    }
+}
+
+@keyframes medida_azul {
+    from {
+        box-shadow: 0px 0px 0px #689CB1;
+    }
+    to {
+        box-shadow: 15px 15px 0px #689CB1;
+    }
+}
+
+@keyframes medida_rosa {
+    from {
+        box-shadow: 0px 0px 0px #FC9FF8;
+    }
+    to {
+        box-shadow: 15px 15px 0px #FC9FF8;
+    }
+}
+
+#programa > #frstRow > .medidas > .medida:hover,
+#programa > #ScndRow > .medidas > .medida:hover{
+    color: white;
+    background-color: #344E59;
+
+    top: -15px;
+    left: -15px;
+}
+
+.box_shadow_azul:hover{
+    animation: medida 200ms ease-out, medida_azul 200ms ease-out;
+    box-shadow: 15px 15px 0px #689CB1;
+}
+
+.box_shadow_rosa:hover{
+    animation: medida 200ms ease-out, medida_rosa 200ms ease-out;
+    box-shadow: 15px 15px 0px #FC9FF8;
+}
+/* TRANSIÇÃO ANIMAÇÂO CARTÕES DAS MEDIDAS */
+
+/* IMAGENS NOS CARTÕES DAS MEDIDAS */
+#medidaMateriais{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/Medidas/medidaMaterias.jpg);
+}
+
+#medidaMateriais:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/Medidas/medidaMaterias.jpg);
+}
+
+#medidaESEC{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/Medidas/medidaESEC.png);
+}
+
+#medidaESEC:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/Medidas/medidaESEC.png);
+}
+
+#medidaCaloiros{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/Medidas/medidaCaloiros.png);
+}
+
+#medidaCaloiros:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/Medidas/medidaCaloiros.png);
+}
+
+#medidaCursos{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/Medidas/medidaCursos.png);
+}
+
+#medidaCursos:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/Medidas/medidaCursos.png);
+}
+
+#medidaCartao{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/Medidas/medidaCartão.jpg);
+}
+
+#medidaCartao:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/Medidas/medidaCartão.jpg);
+}
+
+#medidaHorários{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/Medidas/medidaHorários.jpg);
+}
+
+#medidaHorários:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/Medidas/medidaHorários.jpg);
+}
+
+#medidaNovoPolo{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/Medidas/medidaPolo.png);
+}
+
+#medidaNovoPolo:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/Medidas/medidaPolo.png);
+}
+
+#medidaErasmus{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(Imagens/Medidas/medidaErasmus.jpg);
+}
+
+#medidaErasmus:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Imagens/Medidas/medidaErasmus.jpg);
+}
+/* IMAGENS NOS CARTÕES DAS MEDIDAS */
+
+/* STYLING DO POP-UP DAS MEDIDAS */
+.modal {
+    display: none; /* Pop-up invisível */
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* posição fixa */
+    z-index: 2; /* mostrar a frente do conteúdo */
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: 100vw; /* ocupar toda a area visivel pelo utilizador */
+    height: 100vh; /* ocupar toda a area visivel pelo utilizador */
+    overflow: hidden; /* Correção de erros de responsividade */
+    background-color: rgba(0,0,0,0.4); /* background levemente escuro */
+}
+
+/* STYLING DO BOTÃO DE FECHAR POP-UP */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:active{
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 100%;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
+/* STYLING DO BOTÃO DE FECHAR POP-UP */
+
+/* ANIMAÇÂO DE ABRIR POP-UP */
+@keyframes animatetop {
+    from {top: 300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+/* ANIMAÇÂO DE ABRIR POP-UP */
+
+/* CONTENT STYLING */
+.contentContainter {
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 85%;
+    position: relative;
+    background-color: #fefefe;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 250ms;
+    animation-timing-function: ease-out;
+}
+
+.mainContent, .popUpTextContent{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+}
+
+.mainContent > *{
+    flex: 1; /* Tamanhos de colunas iguais / Imagem e texto */
+}
+
+.popUpTextContent{
+    flex-flow: column; /* Título + Texto informativo na vertical */
+}
+
+.popUpImage{
+    height: 78vh;
+    object-fit: cover;
+    margin: 10px 5px;
+    border-radius: 20px; /* Retângulo arredondado na imagem */
+    overflow: hidden;
+}
+
+.popUpText{
+    margin: 20px;
+}
+
+.popUpTitle{
+    font-size: 71px;
+    line-height: 75px;
+}
+/* CONTENT STYLING */
+/* STYLING DO POP-UP DAS MEDIDAS */
+/* PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA PROGRAMA */

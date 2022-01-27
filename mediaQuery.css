@@ -1,0 +1,292 @@
+
+/* CSS ATIVADO QUANDO A TELA TEM MENOS DE 1400PX DE LARGURA */
+@media only screen and (max-width: 1400px) {
+    #wrapper{
+        overflow-x: hidden;
+    }
+
+    #NavBarLists{
+        gap: 5rem;
+    }
+
+    #noticias > #separadorNoticias, 
+    #noticias > #separadorNoticias > img,
+    #programa > #separadorPrograma,
+    #programa > #separadorPrograma > img,
+    #quemSomos > #separadorQuemSomos,
+    #quemSomos > #separadorQuemSomos > img{
+        display: flex;
+        width: 125%;
+        justify-content: center;
+    }
+
+    #noticias > #noticiasContent{
+        gap: 2rem;
+    }
+
+    #noticias > #noticiasContent > #alternativeContent > * > .image{
+        margin: 0;
+        height: calc(100vw * 0.11);
+        width: calc(100vw * 0.11);
+    }
+    
+    #noticias > #noticiasContent > #alternativeContent > * > .text > h2{
+        margin-top: 0;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    #programa > #frstRow,
+    #programa > #ScndRow{
+    width: 90%;
+    font-size: calc(100vw * 0.013);
+    line-height: calc(100vw * 0.015);
+    }
+    .popUpImage{
+        width: 50%;
+        margin: 10px 5px;
+        border-radius: 20px;
+    }
+    
+    .popUpText{
+        margin: 16px;
+    }
+    
+    .popUpTitle{
+        font-size: 60px;
+        line-height: 60px;
+    }
+}
+/* CSS ATIVADO QUANDO A TELA TEM MENOS DE 1400PX DE LARGURA */
+
+/* CSS ATIVADO QUANDO A TELA TEM MENOS DE 1100PX DE LARGURA */
+@media (max-width: 1100px) {
+    #slogan{
+        font-size: 70px;
+        line-height: 70px;
+    }
+    #programa > #frstRow,
+    #programa > #ScndRow{
+    flex-flow: column;
+    font-size: calc(100vw * 0.025);
+    line-height: calc(100vw * 0.028);
+    }
+
+    .popUpImage{
+        width: 50%;
+        margin: 10px 5px;
+        border-radius: 20px;
+    }
+    
+    .popUpText{
+        margin: 16px;
+        font-size: calc(100vw * 0.019);
+        line-height: calc(100vw * 0.020);
+    }
+    
+    .popUpTitle{
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    @keyframes membroConselhoAnim {
+        from{
+            top: 75vh;
+            opacity: 0;
+        }
+        to{
+            top: 12.5vw;
+            opacity: 1;
+        }
+    }
+
+    @keyframes membroConselhoAnimContent {
+        from{
+            max-height: 10vh;
+            opacity: 0;
+        }
+        to{
+            max-height: 40vh;
+            opacity: 1;
+        }
+    }
+
+    .card{
+        flex-flow: column;
+        align-items: center;
+        right: 0;
+        top: 12.5vw;
+    }
+
+    .card .card-header {
+        width: 100%;
+        right: 0;
+
+    }
+    
+    .card .card-header .profile-img {
+        position: initial !important;
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .card-content{
+        align-items: center;
+        right: 0;
+        top: -25vw;
+        padding: 12.5vw 0 0 0;
+        min-width: 350px;
+        width: 80vw;
+        max-width: 80vw;
+        min-height: 50vh;;
+        height: 50vh;
+        max-height: 50vh;;
+    }
+
+    .card .social-links .social-icon {
+        width: 13vw;
+    }
+
+    .card .card-body {
+        padding: 0;
+        width: calc(100% - 8vw);
+        flex-wrap: 1;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        text-align: center;
+        height: 25vh;
+    }
+
+    .card .card-body .name {
+        margin: 1.5vh 0;
+        font-size: 2.75vh;
+        line-height: 2.80vh;
+    }
+
+    .card .card-body .about_card {
+        margin: 1.5vh 0;
+        font-size: 1.5vh;
+        line-height: 1.55vh;
+    }
+
+    .card .card-body .mail, .card .card-body .mail:hover {
+        margin: 1.5vh 0;
+        font-size: 1.4vh;
+        line-height: 1.45vh;
+    }
+
+    .card .card-body .job {
+        margin: 1.5vh 0;
+        font-size: 1.5vh;
+        line-height: 1.55vh;
+    }
+}
+/* CSS ATIVADO QUANDO A TELA TEM MENOS DE 1100PX DE LARGURA */
+
+/* CSS ATIVADO QUANDO A TELA TEM MENOS DE 1000PX DE LARGURA */
+@media (max-width: 1000px) {
+    #wrapper{
+        overflow-x: hidden;
+    }
+    #noticias > #separadorNoticias, #noticias > #separadorNoticias > img{
+        display: flex;
+        width: 150%;
+        justify-content: center;
+    }
+    #noticias > #noticiasContent > #mainContent > * > .image{
+        height: calc(100vw * 0.5);
+    }
+    #noticias > #noticiasContent, #alternativeContent{
+        gap: 1.5rem;
+    }
+    #noticias > #noticiasContent > #alternativeContent > *{
+        gap: 1.5rem;
+        height: calc(100vw * 0.25);
+    }
+    #noticias > #noticiasContent > #alternativeContent > * > .image{
+        height: calc(100vw * 0.25);
+        width: calc(100vw * 0.25);
+    }
+    #noticias > #noticiasContent{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    #sloganRodape{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .title{
+        margin-top: 100px;
+        font-size: 35px;
+        line-height: 35px;
+    }
+    #quemSomosSobreNos > * {
+        font-size: 20px;
+    }
+    #quemSomosSobreNos > * > #frstLine,
+    #quemSomosSobreNos > * > #ScndLine{
+        flex-flow: column;
+        gap: 0;
+    }
+    #quemSomosSobreNos >* >* > img{
+        height: calc(100vw * 0.1);
+    }
+    .popUpImage{
+        width: 65%;
+        border-radius: 20px;
+        margin: 0;
+    }
+    
+    .popUpTitle{
+        font-size: 35px;
+        line-height: 35px;
+        margin: 0;
+    }
+    .mainContent{
+        flex-flow: column;
+    }
+}
+/* CSS ATIVADO QUANDO A TELA TEM MENOS DE 1000PX DE LARGURA */
+
+/* CSS ATIVADO QUANDO A TELA TEM MENOS DE 800 DE LARGURA */
+@media (max-width: 800px) {
+    #NavBarLinks{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    footer{
+        gap: 0;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    #sloganRodape{
+        flex-shrink: 1;
+    }
+    #socials > a > img{
+        display: flex;
+        width: 30px;
+    }
+    #programa > #frstRow,
+    #programa > #ScndRow{
+    font-size: calc(100vw * 0.023);
+    line-height: calc(100vw * 0.025);
+    }
+    .title{
+        margin-top: 100px;
+        font-size: 30px;
+        line-height: 30px;
+    }
+    #quemSomosSobreNos > #sobreNos{
+        font-size: 15px;
+    }
+    #quemSomosSobreNos > #sobreNos > #thrdLine > #valores1,
+    #quemSomosSobreNos > #sobreNos > #thrdLine > #valores2 {
+        flex-flow: column;
+    }
+    #quemSomosSobreNos >* >* > img{
+        height: calc(100vw * 0.15);
+    }
+
+}
+/* CSS ATIVADO QUANDO A TELA TEM MENOS DE 800 DE LARGURA */

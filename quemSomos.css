@@ -1,0 +1,223 @@
+/* MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO */
+#membrosDoConselho{
+    font-size: 18px;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 5rem;
+}
+
+#membrosDoConselho >* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.membroConselho > * > img:hover{
+    filter: brightness(0.75);
+}
+/* MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO MEMBROSDOCONSELHO */
+
+/* SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS */
+#quemSomosSobreNos,
+#quemSomosSobreNos >*,
+#quemSomosSobreNos >* >*{
+    display: flex;
+    justify-content: center;
+}
+
+#quemSomosSobreNos >*{
+    width: 75%;
+    flex-flow: column;
+    align-items: center;
+}
+
+#quemSomosSobreNos >* >*{
+    width: -webkit-fill-available;
+    text-align: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#quemSomosSobreNos >* >* > img{
+    height: calc(100vw * 0.055);
+}
+
+@keyframes membroConselhoAnim {
+    from{
+        top: 50vh;
+        right: 0vw;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        right: -9vw;
+        opacity: 1;
+    }
+}
+
+.cardElemento, 
+.cardElemento > *, 
+.cardElemento > * > *,
+.cardElemento > * > * > *{
+    /*border: solid black 1px;*/
+    margin: 0;
+}
+
+.cardElemento{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card .card-header .profile-img {
+    position: relative;
+    right: 12.5vw;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 100%;
+    border: 8px solid #8AD0EC;
+    box-shadow: 0 0 50px rgba(138, 208, 236, 0.3);
+    z-index: 4;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    right: -9vw;
+    font-size: 20px;
+    /*
+    background-color: #50264e;
+    max-width: 75vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 20px #FC9FF8;*/
+    animation: membroConselhoAnim 500ms ease-in-out;
+}
+
+
+@keyframes membroConselhoAnimContent {
+    from{
+        right:25vw;
+        max-width: 12.5vw;
+        opacity: 0;
+    }
+    to{
+        right: 15vw;
+        max-width: 40vw;
+        opacity: 1;
+    }
+}
+
+.card-content{
+    /**/
+    background-color: #50264e;
+    box-shadow: 0 0 50px rgba(252, 159, 248, 0.5);
+    border-radius: 1vw;
+    max-width: 40vw;
+    padding-left: 15vw;
+    position: relative;
+    right: 15vw;
+    /**/
+    display: none;
+    flex: 3;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    animation: membroConselhoAnimContent 500ms ease-in-out;
+}
+
+.card-content::after{
+    max-width: 40vw;
+    right: 15vw;
+    display: flex;
+}
+
+.card .card-header {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: -9vw;
+    width: 25%;
+}
+
+.card .card-body {
+    padding: 0 4vw;
+    color: white;
+    margin: 0;
+}
+
+.card .card-body .name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #8AD0EC;
+}
+
+.card .card-body .mail {
+    font-size: 14px;
+    color: #8AD0EC;
+}
+
+.card .card-body .mail:hover {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.card .card-body .job {
+    font-size: 14px;
+}
+
+.card .social-links {
+    display: flex;
+    width: 100%;
+    z-index: 4;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.card .social-links .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    border-radius: 100%;
+    border: solid 0.3vw #8AD0EC;
+    background-color: #8AD0EC;
+}
+
+.card .social-links .social-icon > *{
+    width: 100%;
+    height: 100%;
+}
+
+#valores1, 
+#valores2{
+    display: flex;
+    flex-grow: 1;
+    flex: 1;
+    justify-content: space-around;
+    font-weight: 600;
+}
+
+
+.title{
+    display: block;
+    margin-top: 100px;
+    font-size: 50px;
+    line-height: 50px;
+    border-bottom: #99579D solid 10px;
+    border-radius: 10px;
+}
+/* SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS SOBRENOS */
