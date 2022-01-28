@@ -62,7 +62,6 @@
 .cardElemento > *, 
 .cardElemento > * > *,
 .cardElemento > * > * > *{
-    /*border: solid black 1px;*/
     margin: 0;
 }
 
@@ -96,11 +95,6 @@
     position: relative;
     right: -9vw;
     font-size: 20px;
-    /*
-    background-color: #50264e;
-    max-width: 75vw;
-    border-radius: 1vw;
-    box-shadow: 0 0 20px #FC9FF8;*/
     animation: membroConselhoAnim 500ms ease-in-out;
 }
 
