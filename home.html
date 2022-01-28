@@ -37,13 +37,13 @@
                 <div id=langChoice>
                     <ul id=langList>
                         <li class=langLi>
-                            <a class=Lang id=PT>PT</a>
+                            <a class="Lang pointer" id=PT>PT</a>
                         </li>
                         <li class=langLi>
-                            <a class=Lang>|</a>
+                            <a class="Lang">|</a>
                         </li>
                         <li class=langLi>
-                            <a class=Lang id=EN href="homeEN.html">EN</a>
+                            <a class="Lang pointer" id=EN href="homeEN.html">EN</a>
                         </li>
                     </ul>
                 </div>
@@ -53,15 +53,15 @@
                 <div id=navBarSpacing style="height: 100px; margin: 0;"></div>
                 <div id="buttonVideo">
                     <div id=closeVideoBtn class="closeVideo">
-                        <p>Fechar</p>
+                        <p id="closeVideoBtnText">Fechar</p>
                     </div>
                     <div id=openVideoBtn class="closeVideo">
-                        <p>Abrir Video</p>
+                        <p id="openVideoBtnText">Abrir Video</p>
                     </div>
                 </div>
                 <div id=mainPhoto>
                     <div id=imgcontainer>
-                        <img src="Imagens/MainPhoto.svg">
+                        <img id="mainPhotoSrc" src="Imagens/MainPhoto.svg">
                     </div>
                     <div id="videoplay">
                         <div id="videoBackground"></div>
@@ -75,7 +75,7 @@
                 <div id=noticiasMarker></div>
                 <div id=noticias>
                     <div id=separadorNoticias>
-                        <img src="/Imagens/SeparadorNoticias.svg">
+                        <img id="separadorNoticiasSrc" src="/Imagens/SeparadorNoticias.svg">
                     </div>
                     <div id=noticiasContent>
                         <div id=mainContent class=pointer>
@@ -745,5 +745,6 @@
             </footer>
         </div>
         <script src="home.js"></script>
+        <!-- <script src="traducao.js"></script> -->
     </body>
 </html>
