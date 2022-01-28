@@ -197,7 +197,7 @@
         height: calc(100vw * 0.5);
     }
     #noticias > #noticiasContent, #alternativeContent{
-        gap: 1.5rem;
+        gap: 2rem;
     }
     #noticias > #noticiasContent > #alternativeContent > *{
         gap: 1.5rem;
@@ -209,7 +209,7 @@
     }
     #noticias > #noticiasContent{
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 2rem;
     }
     #sloganRodape{
         font-size: 30px;
